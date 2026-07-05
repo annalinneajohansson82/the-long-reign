@@ -1,6 +1,6 @@
 ---
 title: Resource Flow
-id: economy/resource-flow
+id: 04-economy/resource-flow
 
 version: 0.1.0
 status: Draft

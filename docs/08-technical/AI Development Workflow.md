@@ -1,6 +1,6 @@
 ---
 title: AI Development Workflow
-id: technical/ai-development-workflow
+id: 08-technical/ai-development-workflow
 
 version: 0.1.0
 status: Draft
@@ -9,11 +9,11 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/readme
-  - foundation/principles
-  - foundation/documentation-standards
-  - foundation/adr-process
-  - foundation/rfc-process
+  - 00-foundation/readme
+  - 00-foundation/principles
+  - 00-foundation/documentation-standards
+  - 00-foundation/adr-process
+  - 00-foundation/rfc-process
 
 used_by:
   - All AI collaborators
@@ -508,10 +508,10 @@ A successful AI collaborator is not the one that writes the most code. It is the
 
 # Related Documents
 
-- `foundation/principles` (`Principles.md`) — the design pillars enforced by the Gameplay Compliance Agent
-- `foundation/documentation-standards` (`Documentation Standards.md`) — how documentation is written
-- `foundation/adr-process` (`ADR Process.md`) — how architectural decisions are recorded
-- `foundation/rfc-process` (`RFC Process.md`) — how new systems are proposed
+- `00-foundation/principles` (`Principles.md`) — the design pillars enforced by the Gameplay Compliance Agent
+- `00-foundation/documentation-standards` (`Documentation Standards.md`) — how documentation is written
+- `00-foundation/adr-process` (`ADR Process.md`) — how architectural decisions are recorded
+- `00-foundation/rfc-process` (`RFC Process.md`) — how new systems are proposed
 - `AI Routing Policy.md` — which AI handles which task
 - `Context Packaging Strategy.md` — how agents receive context for their tasks
 - `Coding Standards.md` — the standards enforced by the Code Review Agent

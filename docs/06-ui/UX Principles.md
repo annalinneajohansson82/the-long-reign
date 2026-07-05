@@ -1,6 +1,6 @@
 ---
 title: UX Principles
-id: ui/ux-principles
+id: 06-ui/ux-principles
 
 version: 0.1.0
 status: Draft
@@ -9,7 +9,7 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/principles
+  - 00-foundation/principles
   - VIS-001
 
 used_by:

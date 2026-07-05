@@ -1,6 +1,6 @@
 ---
 title: Context Packaging Strategy
-id: technical/context-packaging-strategy
+id: 08-technical/context-packaging-strategy
 
 version: 0.1.0
 status: Draft
@@ -9,10 +9,10 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - technical/ai-development-workflow
-  - technical/ai-routing-policy
-  - foundation/documentation-standards
-  - foundation/project-structure
+  - 08-technical/ai-development-workflow
+  - 08-technical/ai-routing-policy
+  - 00-foundation/documentation-standards
+  - 00-foundation/project-structure
 
 used_by:
   - Chief Engineer
@@ -62,8 +62,8 @@ Each AI role receives a tailored context package: the subset of documents and sp
 
 **Typical context for a decision**:
 - The relevant RFC or ADR draft
-- The design principles document (`foundation/principles`)
-- The vision document (`foundation/why`)
+- The design principles document (`00-foundation/principles`)
+- The vision document (`00-foundation/why`)
 - Any conflicting specifications or trade-offs identified by AI collaborators
 
 ---
@@ -72,9 +72,9 @@ Each AI role receives a tailored context package: the subset of documents and sp
 
 **Receives**:
 - Vision documents (`01-vision/`)
-- Design principles (`foundation/principles`)
+- Design principles (`00-foundation/principles`)
 - Existing Game Design Documents (`02-gameplay/`, `03-simulation/`, `04-economy/`, `05-world/`)
-- Glossary (`foundation/glossary`)
+- Glossary (`00-foundation/glossary`)
 - The specific question or design challenge being explored
 
 **Does NOT receive**:
@@ -91,9 +91,9 @@ Each AI role receives a tailored context package: the subset of documents and sp
 
 **Receives**:
 - All vision and design documents relevant to the document being written
-- The design principles (`foundation/principles`)
-- Documentation standards (`foundation/documentation-standards`)
-- The glossary (`foundation/glossary`)
+- The design principles (`00-foundation/principles`)
+- Documentation standards (`00-foundation/documentation-standards`)
+- The glossary (`00-foundation/glossary`)
 - Existing related documents (for cross-referencing)
 - Any approved RFCs or ADRs that the document must conform to
 - Templates (ADR, RFC, Design Document)
@@ -111,13 +111,13 @@ Each AI role receives a tailored context package: the subset of documents and sp
 
 **Receives**:
 - All technical specifications relevant to the feature being implemented
-- Architecture documentation (`technical/architecture`)
-- AI Development Workflow (`technical/ai-development-workflow`)
-- Coding Standards (`technical/coding-standards`)
+- Architecture documentation (`08-technical/architecture`)
+- AI Development Workflow (`08-technical/ai-development-workflow`)
+- Coding Standards (`08-technical/coding-standards`)
 - Relevant ADRs
-- The Data Models document (`technical/data-models`)
-- Performance targets (`technical/performance`)
-- Technology Stack (`technical/technology-stack`)
+- The Data Models document (`08-technical/data-models`)
+- Performance targets (`08-technical/performance`)
+- Technology Stack (`08-technical/technology-stack`)
 
 **Does NOT receive**:
 - Raw brainstorming notes
@@ -153,7 +153,7 @@ Each AI role receives a tailored context package: the subset of documents and sp
 **Receives**:
 - The implementation being reviewed
 - The specification the implementation should conform to
-- The design principles (`foundation/principles`, for Gameplay Compliance Agent)
+- The design principles (`00-foundation/principles`, for Gameplay Compliance Agent)
 - Accessibility standards (for Accessibility Agent)
 - UX heuristics (for UX Consistency Agent)
 
@@ -211,6 +211,6 @@ This format ensures consistency across all task delegations.
 
 - `AI Development Workflow.md` — the AI roles and responsibilities that define context needs
 - `AI Routing Policy.md` — which AI handles which task
-- `foundation/documentation-standards` (`Documentation Standards.md`) — how documents are written and versioned
-- `foundation/project-structure` (`Project Structure.md`) — where documents live
+- `00-foundation/documentation-standards` (`Documentation Standards.md`) — how documents are written and versioned
+- `00-foundation/project-structure` (`Project Structure.md`) — where documents live
 - `Architecture.md` — the technical architecture that constrains implementation

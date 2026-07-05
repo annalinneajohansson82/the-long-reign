@@ -1,6 +1,6 @@
 ---
 title: Pixel Art Style
-id: art/pixel-art-style
+id: 07-art/pixel-art-style
 
 version: 0.1.0
 status: Draft
@@ -9,8 +9,8 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - art/art-direction
-  - foundation/principles
+  - 07-art/art-direction
+  - 00-foundation/principles
 
 used_by:
   - All sprite and tile asset creation
@@ -183,10 +183,10 @@ Acceptable reference sources for inspiration (not copying):
 
 # Related Documents
 
-- `Art Direction.md` — overall visual philosophy (art/art-direction)
-- `Animation.md` — animation approach (art/animation)
-- `Visual Identity.md` — UI and branding (art/visual-identity)
-- `docs/02-gameplay/Buildings.md` — building categories and upgrade system (gameplay/buildings)
+- `Art Direction.md` — overall visual philosophy (07-art/art-direction)
+- `Animation.md` — animation approach (07-art/animation)
+- `Visual Identity.md` — UI and branding (07-art/visual-identity)
+- `docs/02-gameplay/Buildings.md` — building categories and upgrade system (02-gameplay/buildings)
 - `docs/03-simulation/Settlement Growth.md` — settlement evolution stages
 - `docs/03-simulation/Roads and Logistics.md` — road visual states
 - `docs/03-simulation/Seasons.md` — seasonal effects

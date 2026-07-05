@@ -1,6 +1,6 @@
 ---
 title: Architectural Decision Records Process
-id: foundation/adr-process
+id: 00-foundation/adr-process
 
 version: 0.1.0
 status: Draft
@@ -9,9 +9,9 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/readme
-  - foundation/principles
-  - foundation/documentation-standards
+  - 00-foundation/readme
+  - 00-foundation/principles
+  - 00-foundation/documentation-standards
 
 used_by:
   - All design decisions

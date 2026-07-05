@@ -1,6 +1,6 @@
 ---
 title: Project Structure
-id: foundation/project-structure
+id: 00-foundation/project-structure
 
 version: 0.1.0
 status: Draft
@@ -9,7 +9,7 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/readme
+  - 00-foundation/readme
 
 used_by:
   - All contributors

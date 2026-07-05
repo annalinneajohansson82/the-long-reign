@@ -1,6 +1,6 @@
 ---
 title: Economy Overview
-id: economy/economy-overview
+id: 04-economy/economy-overview
 
 version: 0.1.0
 status: Draft

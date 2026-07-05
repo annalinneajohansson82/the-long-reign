@@ -1,6 +1,6 @@
 ---
 title: Art Direction
-id: art/art-direction
+id: 07-art/art-direction
 
 version: 0.1.0
 status: Draft
@@ -9,15 +9,15 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/why
-  - foundation/principles
+  - 00-foundation/why
+  - 00-foundation/principles
   - VIS-001
 
 used_by:
-  - art/pixel-art-style
-  - art/animation
-  - art/audio
-  - art/visual-identity
+  - 07-art/pixel-art-style
+  - 07-art/animation
+  - 07-art/audio
+  - 07-art/visual-identity
   - All art and rendering implementation
 
 tags:
@@ -146,15 +146,15 @@ The principle that "nothing teleports" has direct visual implications:
 
 # Related Documents
 
-- `Pixel Art Style.md` — pixel art technical specification (art/pixel-art-style)
-- `Animation.md` — animation direction (art/animation)
-- `Audio.md` — audio direction (art/audio)
-- `Visual Identity.md` — broader visual identity, UI, and branding (art/visual-identity)
+- `Pixel Art Style.md` — pixel art technical specification (07-art/pixel-art-style)
+- `Animation.md` — animation direction (07-art/animation)
+- `Audio.md` — audio direction (07-art/audio)
+- `Visual Identity.md` — broader visual identity, UI, and branding (07-art/visual-identity)
 - `docs/01-vision/Vision Statement.md` — project vision and emotional goal (VIS-001)
 - `docs/01-vision/Design Pillars.md` — the six design pillars (VIS-002)
-- `docs/00-foundation/Principles.md` — design principles (foundation/principles)
-- `docs/00-foundation/Why.md` — why the project exists (foundation/why)
-- `docs/02-gameplay/Buildings.md` — building specification (gameplay/buildings)
+- `docs/00-foundation/Principles.md` — design principles (00-foundation/principles)
+- `docs/00-foundation/Why.md` — why the project exists (00-foundation/why)
+- `docs/02-gameplay/Buildings.md` — building specification (02-gameplay/buildings)
 - `docs/03-simulation/Settlement Growth.md` — settlement visual evolution
 - `docs/03-simulation/Roads and Logistics.md` — visible logistics mechanics
 - `docs/03-simulation/Seasons.md` — seasonal gameplay effects

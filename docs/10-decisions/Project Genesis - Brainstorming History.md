@@ -1,6 +1,6 @@
 ---
 title: Project Genesis — Brainstorming History
-id: decisions/project-genesis-brainstorming-history
+id: 10-decisions/project-genesis-brainstorming-history
 
 version: 0.1.0
 status: Draft
@@ -9,8 +9,8 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/readme
-  - foundation/why
+  - 00-foundation/readme
+  - 00-foundation/why
 
 used_by:
   - All contributors

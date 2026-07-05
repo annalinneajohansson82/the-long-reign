@@ -1,6 +1,6 @@
 ---
 title: Beta — Polish, Balance, and Stabilization
-id: roadmap/beta
+id: 09-roadmap/beta
 
 version: 0.1.0
 status: Draft
@@ -9,15 +9,15 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - roadmap/mvp
-  - roadmap/vertical-slice
-  - roadmap/alpha
-  - foundation/readme
-  - foundation/why
-  - foundation/principles
+  - 09-roadmap/mvp
+  - 09-roadmap/vertical-slice
+  - 09-roadmap/alpha
+  - 00-foundation/readme
+  - 00-foundation/why
+  - 00-foundation/principles
 
 used_by:
-  - roadmap/release
+  - 09-roadmap/release
   - All implementation planning
 
 tags:
@@ -124,12 +124,12 @@ No new specification documents are required for Beta. However, the following doc
 
 ## Out of Scope for Beta
 
-- New features or systems (deferred to roadmap/future-expansions or parking-lot)
+- New features or systems (deferred to 09-roadmap/future-expansions or parking-lot)
 - New content (new buildings, heroes, regions, resources, etc.)
 - Major UI redesigns
-- Localization (roadmap/release)
-- Deployment infrastructure (roadmap/release)
-- Marketing or community building (roadmap/release)
+- Localization (09-roadmap/release)
+- Deployment infrastructure (09-roadmap/release)
+- Marketing or community building (09-roadmap/release)
 
 ---
 
@@ -193,10 +193,10 @@ No new specification documents are required for Beta. However, the following doc
 
 # Related Documents
 
-- `roadmap/mvp` — MVP (predecessor milestone)
-- `roadmap/vertical-slice` — Vertical Slice (predecessor milestone)
-- `roadmap/alpha` — Alpha (predecessor milestone)
-- `roadmap/release` — Release (successor milestone)
+- `09-roadmap/mvp` — MVP (predecessor milestone)
+- `09-roadmap/vertical-slice` — Vertical Slice (predecessor milestone)
+- `09-roadmap/alpha` — Alpha (predecessor milestone)
+- `09-roadmap/release` — Release (successor milestone)
 - `01-vision/Design Pillars.md` — Pillars Beta must validate
 - `01-vision/The Six-Month Return Test.md` — Test Beta build must pass
 - `01-vision/Respect the Player's Time.md` — Principle Beta must uphold

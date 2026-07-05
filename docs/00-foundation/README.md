@@ -1,6 +1,6 @@
 ---
 title: Foundation — README
-id: foundation/readme
+id: 00-foundation/readme
 
 version: 0.1.0
 status: Draft

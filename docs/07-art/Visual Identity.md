@@ -1,6 +1,6 @@
 ---
 title: Visual Identity
-id: art/visual-identity
+id: 07-art/visual-identity
 
 version: 0.1.0
 status: Draft
@@ -9,9 +9,9 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - art/art-direction
-  - art/pixel-art-style
-  - foundation/principles
+  - 07-art/art-direction
+  - 07-art/pixel-art-style
+  - 00-foundation/principles
 
 used_by:
   - UI implementation
@@ -266,17 +266,17 @@ Thematic changes should be subtle — the UI should not dramatically change layo
 
 # Related Documents
 
-- `Art Direction.md` — overall visual philosophy (art/art-direction)
-- `Pixel Art Style.md` — pixel art technical constraints (art/pixel-art-style)
-- `Animation.md` — UI animation direction (art/animation)
-- `Audio.md` — UI audio feedback (art/audio)
+- `Art Direction.md` — overall visual philosophy (07-art/art-direction)
+- `Pixel Art Style.md` — pixel art technical constraints (07-art/pixel-art-style)
+- `Animation.md` — UI animation direction (07-art/animation)
+- `Audio.md` — UI audio feedback (07-art/audio)
 - `docs/06-ui/HUD.md` — HUD specification (TODO: populate)
 - `docs/06-ui/Menus.md` — menu specification (TODO: populate)
 - `docs/06-ui/Accessibility.md` — accessibility specification (TODO: populate)
 - `docs/01-vision/Design Pillars.md` — the six design pillars (VIS-002)
-- `docs/00-foundation/Principles.md` — design principles (foundation/principles)
+- `docs/00-foundation/Principles.md` — design principles (00-foundation/principles)
 - `docs/03-simulation/Chronicle.md` — Chronicle system
 - `docs/03-simulation/Seasons.md` — seasonal effects
-- `docs/02-gameplay/Buildings.md` — building UI interactions (gameplay/buildings)
+- `docs/02-gameplay/Buildings.md` — building UI interactions (02-gameplay/buildings)
 - Source: *The Long Reign — Project Handoff* § Respect the Player's Time (forbidden HUD elements), § Chronicle, § Decorations
 - Source: *Project Genesis — Brainstorming History* § The Chronicle, § Living Memories

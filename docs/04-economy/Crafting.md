@@ -1,6 +1,6 @@
 ---
 title: Crafting
-id: economy/crafting
+id: 04-economy/crafting
 
 version: 0.1.0
 status: Draft

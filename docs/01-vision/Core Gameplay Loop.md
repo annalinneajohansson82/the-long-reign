@@ -1,6 +1,6 @@
 ---
 title: Core Gameplay Loop
-id: vision/core-gameplay-loop
+id: 01-vision/core-gameplay-loop
 
 version: 0.1.0
 status: Draft

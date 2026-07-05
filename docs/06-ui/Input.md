@@ -1,6 +1,6 @@
 ---
 title: Input
-id: ui/input
+id: 06-ui/input
 
 version: 0.1.0
 status: Draft
@@ -9,8 +9,8 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - ui/ux-principles
-  - ui/hud
+  - 06-ui/ux-principles
+  - 06-ui/hud
 
 used_by:
   - Frontend Agent

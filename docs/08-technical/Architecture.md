@@ -1,6 +1,6 @@
 ---
 title: Technical Architecture
-id: technical/architecture
+id: 08-technical/architecture
 
 version: 0.1.0
 status: Draft
@@ -9,9 +9,9 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/why
-  - foundation/principles
-  - foundation/project-structure
+  - 00-foundation/why
+  - 00-foundation/principles
+  - 00-foundation/project-structure
 
 used_by:
   - All engineering documents
@@ -182,8 +182,8 @@ Simulation (owns state)
 
 # Related Documents
 
-- `foundation/principles` (`Principles.md`) — the design pillars that constrain architecture
-- `foundation/project-structure` (`Project Structure.md`) — repository layout
+- `00-foundation/principles` (`Principles.md`) — the design pillars that constrain architecture
+- `00-foundation/project-structure` (`Project Structure.md`) — repository layout
 - `AI Development Workflow.md` — how AI collaborators participate in implementation
 - `Technology Stack.md` — specific technology choices
 - `Save System.md` — persistence specification

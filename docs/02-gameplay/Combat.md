@@ -1,6 +1,6 @@
 ---
 title: Combat
-id: gameplay/combat
+id: 02-gameplay/combat
 version: 0.1.0
 status: Draft
 author:

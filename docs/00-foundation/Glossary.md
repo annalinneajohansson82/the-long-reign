@@ -1,6 +1,6 @@
 ---
 title: Glossary
-id: foundation/glossary
+id: 00-foundation/glossary
 
 version: 0.1.0
 status: Draft

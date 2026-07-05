@@ -1,6 +1,6 @@
 ---
 title: MVP — Minimum Viable Product
-id: roadmap/mvp
+id: 09-roadmap/mvp
 
 version: 0.1.0
 status: Draft
@@ -9,12 +9,12 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/readme
-  - foundation/why
-  - foundation/principles
+  - 00-foundation/readme
+  - 00-foundation/why
+  - 00-foundation/principles
 
 used_by:
-  - roadmap/vertical-slice
+  - 09-roadmap/vertical-slice
   - All implementation planning
 
 tags:
@@ -80,23 +80,23 @@ Per the specification-first methodology (see `08-technical/AI Development Workfl
 
 ## Out of Scope for MVP
 
-- Colonies (roadmap/vertical-slice)
-- Roads and desire paths (roadmap/vertical-slice)
-- Heroes (roadmap/vertical-slice)
-- Research (roadmap/vertical-slice)
-- Seasons and weather (roadmap/alpha)
-- Combat (roadmap/vertical-slice)
-- Chronicle and Living Memories (roadmap/alpha)
-- Trade networks (roadmap/alpha)
-- Production chains (beyond a single step) (roadmap/alpha)
-- Decorations (roadmap/vertical-slice)
-- Accessibility compliance (roadmap/beta)
-- Performance optimization beyond functional (roadmap/beta)
-- Multiple save slots (roadmap/alpha)
-- JSON export/import (roadmap/alpha)
-- Full session persistence (roadmap/alpha)
-- Colonies (roadmap/vertical-slice)
-- World map regions and unlockable areas (roadmap/alpha)
+- Colonies (09-roadmap/vertical-slice)
+- Roads and desire paths (09-roadmap/vertical-slice)
+- Heroes (09-roadmap/vertical-slice)
+- Research (09-roadmap/vertical-slice)
+- Seasons and weather (09-roadmap/alpha)
+- Combat (09-roadmap/vertical-slice)
+- Chronicle and Living Memories (09-roadmap/alpha)
+- Trade networks (09-roadmap/alpha)
+- Production chains (beyond a single step) (09-roadmap/alpha)
+- Decorations (09-roadmap/vertical-slice)
+- Accessibility compliance (09-roadmap/beta)
+- Performance optimization beyond functional (09-roadmap/beta)
+- Multiple save slots (09-roadmap/alpha)
+- JSON export/import (09-roadmap/alpha)
+- Full session persistence (09-roadmap/alpha)
+- Colonies (09-roadmap/vertical-slice)
+- World map regions and unlockable areas (09-roadmap/alpha)
 
 ---
 
@@ -158,4 +158,4 @@ All Documentation Prerequisites listed above are complete and reviewed.
 - `01-vision/Vision Statement.md` — Project identity
 - `01-vision/Core Gameplay Loop.md` — The loop the MVP validates
 - `08-technical/AI Development Workflow.md` — Engineering workflow
-- `roadmap/vertical-slice` — Vertical Slice (next milestone)
+- `09-roadmap/vertical-slice` — Vertical Slice (next milestone)

@@ -1,6 +1,6 @@
 ---
 title: RFC Directory
-id: rfc/readme
+id: 11-rfc/readme
 
 version: 0.1.0
 status: Draft
@@ -9,7 +9,7 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/rfc-process
+  - 00-foundation/rfc-process
 
 used_by:
   - Lead Systems Designer
@@ -101,7 +101,7 @@ Example: `docs/11-rfc/building-customization.md`
 
 ## Reference
 
-- **[RFC Process](../00-foundation/RFC%20Process.md)** (foundation/rfc-process) — the authoritative process document for writing, reviewing, and deciding on RFCs
+- **[RFC Process](../00-foundation/RFC%20Process.md)** (00-foundation/rfc-process) — the authoritative process document for writing, reviewing, and deciding on RFCs
 
 ---
 

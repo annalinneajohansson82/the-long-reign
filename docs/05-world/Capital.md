@@ -1,6 +1,6 @@
 ---
 title: "Capital"
-id: world/capital
+id: 05-world/capital
 version: 0.1.0
 status: Draft
 author:

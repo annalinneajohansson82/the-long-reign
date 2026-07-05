@@ -1,6 +1,6 @@
 ---
 title: Performance
-id: technical/performance
+id: 08-technical/performance
 
 version: 0.1.0
 status: Draft
@@ -9,8 +9,8 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/principles
-  - technical/architecture
+  - 00-foundation/principles
+  - 08-technical/architecture
 
 used_by:
   - Rendering Agent

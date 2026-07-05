@@ -1,6 +1,6 @@
 ---
 title: "Colonies"
-id: world/colonies
+id: 05-world/colonies
 version: 0.1.0
 status: Draft
 author:

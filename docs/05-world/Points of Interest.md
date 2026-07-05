@@ -1,6 +1,6 @@
 ---
 title: "Points of Interest"
-id: world/points-of-interest
+id: 05-world/points-of-interest
 version: 0.1.0
 status: Draft
 author:

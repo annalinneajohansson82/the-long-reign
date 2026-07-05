@@ -1,6 +1,6 @@
 ---
 title: Animation
-id: art/animation
+id: 07-art/animation
 
 version: 0.1.0
 status: Draft
@@ -9,9 +9,9 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - art/art-direction
-  - art/pixel-art-style
-  - foundation/principles
+  - 07-art/art-direction
+  - 07-art/pixel-art-style
+  - 00-foundation/principles
 
 used_by:
   - All animation implementation
@@ -207,11 +207,11 @@ Required animations:
 
 # Related Documents
 
-- `Art Direction.md` — overall visual philosophy (art/art-direction)
-- `Pixel Art Style.md` — pixel art technical constraints (art/pixel-art-style)
-- `Visual Identity.md` — UI animation specifics (art/visual-identity)
-- `Audio.md` — audio collaboration with animation (art/audio)
-- `docs/02-gameplay/Buildings.md` — building upgrade tiers (gameplay/buildings)
+- `Art Direction.md` — overall visual philosophy (07-art/art-direction)
+- `Pixel Art Style.md` — pixel art technical constraints (07-art/pixel-art-style)
+- `Visual Identity.md` — UI animation specifics (07-art/visual-identity)
+- `Audio.md` — audio collaboration with animation (07-art/audio)
+- `docs/02-gameplay/Buildings.md` — building upgrade tiers (02-gameplay/buildings)
 - `docs/02-gameplay/Combat.md` — combat system (informs combat animation)
 - `docs/03-simulation/Villagers.md` — villager behavior states
 - `docs/03-simulation/Roads and Logistics.md` — road visual states and logistics

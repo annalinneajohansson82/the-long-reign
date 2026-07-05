@@ -1,6 +1,6 @@
 ---
 title: Resources
-id: gameplay/resources
+id: 02-gameplay/resources
 version: 0.1.0
 status: Draft
 author:

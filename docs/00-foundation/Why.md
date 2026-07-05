@@ -1,6 +1,6 @@
 ---
 title: Why The Long Reign Exists
-id: foundation/why
+id: 00-foundation/why
 
 version: 0.1.0
 status: Draft

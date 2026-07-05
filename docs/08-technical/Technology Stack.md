@@ -1,6 +1,6 @@
 ---
 title: Technology Stack
-id: technical/technology-stack
+id: 08-technical/technology-stack
 
 version: 0.1.0
 status: Draft
@@ -9,8 +9,8 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/why
-  - technical/architecture
+  - 00-foundation/why
+  - 08-technical/architecture
 
 used_by:
   - Chief Engineer
@@ -238,4 +238,4 @@ The following constraints are binding on technology choices:
 - `Save System.md` — LocalStorage and JSON serialization requirements
 - `Coding Standards.md` — coding conventions for the chosen technologies
 - `AI Development Workflow.md` — AI roles that interact with each technology
-- `foundation/why` (`Why.md`) — the project's identity as a browser-based game
+- `00-foundation/why` (`Why.md`) — the project's identity as a browser-based game

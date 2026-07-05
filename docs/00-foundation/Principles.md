@@ -1,6 +1,6 @@
 ---
 title: Design Principles
-id: foundation/principles
+id: 00-foundation/principles
 version: 0.2.0
 status: Reviewed
 
@@ -11,7 +11,7 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/why
+  - 00-foundation/why
 
 used_by:
   - All design documents

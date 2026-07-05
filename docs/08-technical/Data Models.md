@@ -1,6 +1,6 @@
 ---
 title: Data Models
-id: technical/data-models
+id: 08-technical/data-models
 
 version: 0.1.0
 status: Draft
@@ -9,10 +9,10 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/why
-  - foundation/principles
-  - technical/architecture
-  - technical/save-system
+  - 00-foundation/why
+  - 00-foundation/principles
+  - 08-technical/architecture
+  - 08-technical/save-system
 
 used_by:
   - Backend / Simulation Agent
@@ -309,8 +309,8 @@ Kingdom
 
 # Related Documents
 
-- `foundation/why` (`Why.md`) — the kingdom-building vision
-- `foundation/principles` (`Principles.md`) — Living Simulation, Meaningful Growth
+- `00-foundation/why` (`Why.md`) — the kingdom-building vision
+- `00-foundation/principles` (`Principles.md`) — Living Simulation, Meaningful Growth
 - `Save System.md` — how these models are persisted
 - `Architecture.md` — where the data models fit in the system
 - `02-gameplay/` — detailed gameplay specifications (to be written)

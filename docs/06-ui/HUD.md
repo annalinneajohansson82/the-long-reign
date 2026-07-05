@@ -1,6 +1,6 @@
 ---
 title: HUD
-id: ui/hud
+id: 06-ui/hud
 
 version: 0.1.0
 status: Draft
@@ -9,7 +9,7 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - ui/ux-principles
+  - 06-ui/ux-principles
   - VIS-001
 
 used_by:

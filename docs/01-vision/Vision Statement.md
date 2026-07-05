@@ -1,6 +1,6 @@
 ---
 title: Vision Statement
-id: vision/vision-statement
+id: 01-vision/vision-statement
 
 version: 0.1.0
 status: Draft

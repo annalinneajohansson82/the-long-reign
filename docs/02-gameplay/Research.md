@@ -1,6 +1,6 @@
 ---
 title: Research
-id: gameplay/research
+id: 02-gameplay/research
 version: 0.1.0
 status: Draft
 author:

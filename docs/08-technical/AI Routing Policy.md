@@ -1,6 +1,6 @@
 ---
 title: AI Routing Policy
-id: technical/ai-routing-policy
+id: 08-technical/ai-routing-policy
 
 version: 0.1.0
 status: Draft
@@ -9,9 +9,9 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - technical/ai-development-workflow
-  - foundation/principles
-  - foundation/adr-process
+  - 08-technical/ai-development-workflow
+  - 00-foundation/principles
+  - 00-foundation/adr-process
 
 used_by:
   - Human (Creative Director)
@@ -198,6 +198,6 @@ The routing policy is one mechanism for enforcing the Decision Firewall (see `AI
 # Related Documents
 
 - `AI Development Workflow.md` — the AI roles and responsibilities that this policy routes between
-- `foundation/adr-process` (`ADR Process.md`) — the process for architectural decisions
-- `foundation/rfc-process` (`RFC Process.md`) — the process for proposing new systems
+- `00-foundation/adr-process` (`ADR Process.md`) — the process for architectural decisions
+- `00-foundation/rfc-process` (`RFC Process.md`) — the process for proposing new systems
 - `Context Packaging Strategy.md` — how agents receive the context they need for their routed tasks

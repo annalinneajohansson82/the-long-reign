@@ -1,6 +1,6 @@
 ---
 title: Save System
-id: technical/save-system
+id: 08-technical/save-system
 
 version: 0.1.0
 status: Draft
@@ -9,9 +9,9 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/why
-  - foundation/principles
-  - technical/architecture
+  - 00-foundation/why
+  - 00-foundation/principles
+  - 08-technical/architecture
 
 used_by:
   - Backend / Simulation Agent
@@ -234,8 +234,8 @@ Every save carries a version number. The version number allows the game to detec
 
 # Related Documents
 
-- `foundation/why` (`Why.md`) — the emotional goal (return after months, smile)
-- `foundation/principles` (`Principles.md`) — Respect the Player's Time (no FOMO, kingdom waits)
+- `00-foundation/why` (`Why.md`) — the emotional goal (return after months, smile)
+- `00-foundation/principles` (`Principles.md`) — Respect the Player's Time (no FOMO, kingdom waits)
 - `Architecture.md` — where persistence fits in the architecture
 - `Data Models.md` — what data is saved
 - `Performance.md` — serialization/deserialization performance targets

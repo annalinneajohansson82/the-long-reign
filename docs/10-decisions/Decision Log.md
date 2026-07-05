@@ -1,6 +1,6 @@
 ---
 title: Decision Log
-id: decisions/decision-log
+id: 10-decisions/decision-log
 
 version: 0.1.0
 status: Draft
@@ -9,8 +9,8 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/readme
-  - foundation/adr-process
+  - 00-foundation/readme
+  - 00-foundation/adr-process
 
 used_by:
   - All contributors

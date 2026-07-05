@@ -1,6 +1,6 @@
 ---
 title: "World Generation"
-id: world/world-generation
+id: 05-world/world-generation
 version: 0.1.0
 status: Draft
 author:

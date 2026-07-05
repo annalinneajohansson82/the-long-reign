@@ -1,6 +1,6 @@
 ---
 title: Audio
-id: art/audio
+id: 07-art/audio
 
 version: 0.1.0
 status: Draft
@@ -9,8 +9,8 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - art/art-direction
-  - foundation/principles
+  - 07-art/art-direction
+  - 00-foundation/principles
 
 used_by:
   - Audio implementation
@@ -188,13 +188,13 @@ This audio progression directly supports the Meaningful Growth and Living Simula
 
 # Related Documents
 
-- `Art Direction.md` — overall visual and atmospheric philosophy (art/art-direction)
-- `Animation.md` — animation direction (audio-visual synchronization) (art/animation)
-- `Visual Identity.md` — UI audio alignment (art/visual-identity)
+- `Art Direction.md` — overall visual and atmospheric philosophy (07-art/art-direction)
+- `Animation.md` — animation direction (audio-visual synchronization) (07-art/animation)
+- `Visual Identity.md` — UI audio alignment (07-art/visual-identity)
 - `docs/01-vision/Design Pillars.md` — the six design pillars (VIS-002)
 - `docs/01-vision/Vision Statement.md` — emotional goal (VIS-001)
-- `docs/00-foundation/Principles.md` — design principles (foundation/principles)
-- `docs/02-gameplay/Buildings.md` — building actions (gameplay/buildings)
+- `docs/00-foundation/Principles.md` — design principles (00-foundation/principles)
+- `docs/02-gameplay/Buildings.md` — building actions (02-gameplay/buildings)
 - `docs/03-simulation/Villagers.md` — villager activity
 - `docs/03-simulation/Settlement Growth.md` — settlement audio density progression
 - `docs/03-simulation/Seasons.md` — seasonal audio changes

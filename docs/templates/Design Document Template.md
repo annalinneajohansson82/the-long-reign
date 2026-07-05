@@ -81,7 +81,7 @@ tags: []
 
 # Related Documents
 
-*Cross-reference all documents that inform, depend on, or are informed by this one. Use document IDs (e.g., `VIS-001`, `foundation/documentation-standards`) rather than file paths. Update `depends_on` and `used_by` in both this document and the referenced documents.*
+*Cross-reference all documents that inform, depend on, or are informed by this one. Use document IDs (e.g., `VIS-001`, `00-foundation/documentation-standards`) rather than file paths. Update `depends_on` and `used_by` in both this document and the referenced documents.*
 
 - `DOC-ID` — *brief description of the relationship*
 

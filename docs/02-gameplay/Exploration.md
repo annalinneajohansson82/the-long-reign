@@ -1,6 +1,6 @@
 ---
 title: Exploration
-id: gameplay/exploration
+id: 02-gameplay/exploration
 version: 0.1.0
 status: Draft
 author:

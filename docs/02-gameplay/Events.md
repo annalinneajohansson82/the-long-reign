@@ -1,6 +1,6 @@
 ---
 title: Events
-id: gameplay/events
+id: 02-gameplay/events
 version: 0.1.0
 status: Draft
 author:

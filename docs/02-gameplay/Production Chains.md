@@ -1,6 +1,6 @@
 ---
 title: Production Chains
-id: gameplay/production-chains
+id: 02-gameplay/production-chains
 version: 0.1.0
 status: Draft
 author:

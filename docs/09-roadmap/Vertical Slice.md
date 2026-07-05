@@ -1,6 +1,6 @@
 ---
 title: Vertical Slice — Thin Slice Through All Systems
-id: roadmap/vertical-slice
+id: 09-roadmap/vertical-slice
 
 version: 0.1.0
 status: Draft
@@ -9,13 +9,13 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - roadmap/mvp
-  - foundation/readme
-  - foundation/why
-  - foundation/principles
+  - 09-roadmap/mvp
+  - 00-foundation/readme
+  - 00-foundation/why
+  - 00-foundation/principles
 
 used_by:
-  - roadmap/alpha
+  - 09-roadmap/alpha
   - All implementation planning
 
 tags:
@@ -81,23 +81,23 @@ In addition to all MVP documentation prerequisites, the following must be comple
 
 ## Out of Scope for Vertical Slice
 
-- Full simulation depth (aging, death, retirement, generational changes) — roadmap/alpha
-- Full hero roster (10–20 heroes) — roadmap/alpha
-- Complete technology tree — roadmap/alpha
-- Full production chains and luxury goods — roadmap/alpha
-- Trade networks between settlements — roadmap/alpha
-- Full world map with all regions and islands — roadmap/alpha
-- All colony identities and specialization — roadmap/alpha
-- Complete decoration catalog — roadmap/alpha
-- Full Chronicle event catalog — roadmap/alpha
-- Living Memories biographies — roadmap/alpha
-- Disasters and failure states (revolt, abandonment, fires) — roadmap/alpha
-- JSON export/import — roadmap/beta
-- Full session persistence — roadmap/alpha
-- Balance tuning — roadmap/beta
-- Performance optimization — roadmap/beta
-- Accessibility compliance audit — roadmap/beta
-- Full audio — roadmap/beta
+- Full simulation depth (aging, death, retirement, generational changes) — 09-roadmap/alpha
+- Full hero roster (10–20 heroes) — 09-roadmap/alpha
+- Complete technology tree — 09-roadmap/alpha
+- Full production chains and luxury goods — 09-roadmap/alpha
+- Trade networks between settlements — 09-roadmap/alpha
+- Full world map with all regions and islands — 09-roadmap/alpha
+- All colony identities and specialization — 09-roadmap/alpha
+- Complete decoration catalog — 09-roadmap/alpha
+- Full Chronicle event catalog — 09-roadmap/alpha
+- Living Memories biographies — 09-roadmap/alpha
+- Disasters and failure states (revolt, abandonment, fires) — 09-roadmap/alpha
+- JSON export/import — 09-roadmap/beta
+- Full session persistence — 09-roadmap/alpha
+- Balance tuning — 09-roadmap/beta
+- Performance optimization — 09-roadmap/beta
+- Accessibility compliance audit — 09-roadmap/beta
+- Full audio — 09-roadmap/beta
 
 ---
 
@@ -157,8 +157,8 @@ In addition to all MVP documentation prerequisites, the following must be comple
 
 # Related Documents
 
-- `roadmap/mvp` — MVP (predecessor milestone)
-- `roadmap/alpha` — Alpha (successor milestone)
+- `09-roadmap/mvp` — MVP (predecessor milestone)
+- `09-roadmap/alpha` — Alpha (successor milestone)
 - `02-gameplay/` — All gameplay specification documents
 - `03-simulation/` — All simulation specification documents
 - `04-economy/` — All economy specification documents

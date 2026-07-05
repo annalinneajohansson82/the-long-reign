@@ -1,6 +1,6 @@
 ---
 title: Luxury Goods
-id: economy/luxury-goods
+id: 04-economy/luxury-goods
 
 version: 0.1.0
 status: Draft

@@ -1,6 +1,6 @@
 ---
 title: Coding Standards
-id: technical/coding-standards
+id: 08-technical/coding-standards
 
 version: 0.1.0
 status: Draft
@@ -9,10 +9,10 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/principles
-  - foundation/documentation-standards
-  - technical/architecture
-  - technical/technology-stack
+  - 00-foundation/principles
+  - 00-foundation/documentation-standards
+  - 08-technical/architecture
+  - 08-technical/technology-stack
 
 used_by:
   - Chief Engineer
@@ -211,8 +211,8 @@ The Refactoring Agent may proactively improve code within these constraints:
 
 # Related Documents
 
-- `foundation/principles` (`Principles.md`) — the design pillars that code must respect
-- `foundation/documentation-standards` (`Documentation Standards.md`) — documentation-writing standards (for code comments and docstrings)
+- `00-foundation/principles` (`Principles.md`) — the design pillars that code must respect
+- `00-foundation/documentation-standards` (`Documentation Standards.md`) — documentation-writing standards (for code comments and docstrings)
 - `Architecture.md` — domain boundaries that code must respect
 - `Technology Stack.md` — the languages and frameworks these standards apply to
 - `AI Development Workflow.md` — the Code Review Agent and Refactoring Agent that enforce these standards

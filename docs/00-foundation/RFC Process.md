@@ -1,6 +1,6 @@
 ---
 title: Request for Comments Process
-id: foundation/rfc-process
+id: 00-foundation/rfc-process
 
 version: 0.1.0
 status: Draft
@@ -9,9 +9,9 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/readme
-  - foundation/documentation-standards
-  - foundation/adr-process
+  - 00-foundation/readme
+  - 00-foundation/documentation-standards
+  - 00-foundation/adr-process
 
 used_by:
   - All feature proposals

@@ -1,6 +1,6 @@
 ---
 title: Alpha — Feature-Complete Internal Build
-id: roadmap/alpha
+id: 09-roadmap/alpha
 
 version: 0.1.0
 status: Draft
@@ -9,14 +9,14 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - roadmap/mvp
-  - roadmap/vertical-slice
-  - foundation/readme
-  - foundation/why
-  - foundation/principles
+  - 09-roadmap/mvp
+  - 09-roadmap/vertical-slice
+  - 00-foundation/readme
+  - 00-foundation/why
+  - 00-foundation/principles
 
 used_by:
-  - roadmap/beta
+  - 09-roadmap/beta
   - All implementation planning
 
 tags:
@@ -162,14 +162,14 @@ All documentation in the repository must be complete before Alpha implementation
 
 ## Out of Scope for Alpha
 
-- Balance tuning (roadmap/beta)
-- Performance optimization beyond functional thresholds (roadmap/beta)
-- Accessibility compliance audit (roadmap/beta)
-- Final audio (roadmap/beta)
-- Tutorial/onboarding polish (roadmap/beta)
-- Public distribution readiness (roadmap/beta)
-- Localization (roadmap/release)
-- Future expansions (roadmap/future-expansions)
+- Balance tuning (09-roadmap/beta)
+- Performance optimization beyond functional thresholds (09-roadmap/beta)
+- Accessibility compliance audit (09-roadmap/beta)
+- Final audio (09-roadmap/beta)
+- Tutorial/onboarding polish (09-roadmap/beta)
+- Public distribution readiness (09-roadmap/beta)
+- Localization (09-roadmap/release)
+- Future expansions (09-roadmap/future-expansions)
 
 ---
 
@@ -244,9 +244,9 @@ All documentation in the repository must be complete before Alpha implementation
 
 # Related Documents
 
-- `roadmap/mvp` — MVP (predecessor milestone)
-- `roadmap/vertical-slice` — Vertical Slice (predecessor milestone)
-- `roadmap/beta` — Beta (successor milestone)
+- `09-roadmap/mvp` — MVP (predecessor milestone)
+- `09-roadmap/vertical-slice` — Vertical Slice (predecessor milestone)
+- `09-roadmap/beta` — Beta (successor milestone)
 - `01-vision/Design Pillars.md` — The six pillars Alpha must realize
 - `01-vision/The Six-Month Return Test.md` — The test Alpha must pass
 - `02-gameplay/` through `08-technical/` — All specification documents

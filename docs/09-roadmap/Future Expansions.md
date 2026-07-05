@@ -1,6 +1,6 @@
 ---
 title: Future Expansions — Post-Release Roadmap
-id: roadmap/future-expansions
+id: 09-roadmap/future-expansions
 
 version: 0.1.0
 status: Draft
@@ -9,14 +9,14 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - roadmap/mvp
-  - roadmap/vertical-slice
-  - roadmap/alpha
-  - roadmap/beta
-  - roadmap/release
-  - foundation/readme
-  - foundation/why
-  - foundation/principles
+  - 09-roadmap/mvp
+  - 09-roadmap/vertical-slice
+  - 09-roadmap/alpha
+  - 09-roadmap/beta
+  - 09-roadmap/release
+  - 00-foundation/readme
+  - 00-foundation/why
+  - 00-foundation/principles
 
 used_by:
   - Post-release planning
@@ -97,7 +97,7 @@ This section is intentionally a stub. As ideas are captured in `docs/parking-lot
 
 Systems mentioned in source material that were deferred beyond the initial release scope:
 
-- TODO: Identify any systems from the Handoff document that were intentionally scoped out of roadmap/mvp through roadmap/release and may return here
+- TODO: Identify any systems from the Handoff document that were intentionally scoped out of 09-roadmap/mvp through 09-roadmap/release and may return here
 
 ---
 
@@ -148,7 +148,7 @@ Before any expansion enters implementation:
 
 # Related Documents
 
-- `roadmap/mvp` through `roadmap/release` — Predecessor milestones
+- `09-roadmap/mvp` through `09-roadmap/release` — Predecessor milestones
 - `docs/parking-lot/Future Mechanics.md` — Expansion candidates
 - `docs/parking-lot/Interesting Ideas.md` — Unevaluated ideas
 - `docs/11-rfc/` — RFC process and archive

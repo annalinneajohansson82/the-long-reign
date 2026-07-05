@@ -1,6 +1,6 @@
 ---
 title: Industries
-id: economy/industries
+id: 04-economy/industries
 
 version: 0.1.0
 status: Draft

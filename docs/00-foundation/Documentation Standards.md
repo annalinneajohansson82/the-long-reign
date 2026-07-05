@@ -1,6 +1,6 @@
 ---
 title: Documentation Standards
-id: foundation/documentation-standards
+id: 00-foundation/documentation-standards
 
 version: 0.1.0
 status: Draft
@@ -9,7 +9,7 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - foundation/readme
+  - 00-foundation/readme
 
 used_by:
   - All documents in the project
@@ -45,7 +45,7 @@ Every document must include YAML front matter with the following fields:
 | Field | Required | Description |
 |-------|----------|-------------|
 || `title` | Yes | Human-readable title of the document |
-|| `id` | Yes | Unique identifier. Format: `directory/slug` where slug is the filename without extension, lowercased, spaces and dashes hyphenated (e.g., `foundation/principles`, `vision/respect-the-players-time`, `gameplay/buildings`). |
+|| `id` | Yes | Unique identifier. Format: `directory/slug` using the full directory name (e.g., `00-foundation/principles`, `01-vision/respect-the-players-time`, `02-gameplay/buildings`, `glossary/readme`, `templates/adr-template`). |
 || `version` | Yes | Semantic version of the document |
 || `status` | Yes | One of: `Draft`, `Review`, `Approved`, `Deprecated` |
 || `reviewed_by` | No | Who last reviewed: `human`, `agent`, or empty if unreviewed |
@@ -112,7 +112,7 @@ AI collaborators (Lead Technical Writer, Documentation Specialist, Documentation
 
 # Open Questions
 
-- TODO: Document ID numbering scheme — source material mentions `foundation/readme`, `VIS-001`, `technical/architecture` but does not fully define the convention
+- TODO: Document ID numbering scheme — source material mentions `00-foundation/readme`, `VIS-001`, `08-technical/architecture` but does not fully define the convention
 - TODO: Process for updating document status from Draft to Review to Approved
 - TODO: Version bumping policy (when does a minor edit become a version increment?)
 

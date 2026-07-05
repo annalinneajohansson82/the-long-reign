@@ -1,6 +1,6 @@
 ---
 title: Progression
-id: gameplay/progression
+id: 02-gameplay/progression
 version: 0.1.0
 status: Draft
 author:

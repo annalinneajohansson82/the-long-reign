@@ -1,6 +1,6 @@
 ---
 title: Release — Public Launch
-id: roadmap/release
+id: 09-roadmap/release
 
 version: 0.1.0
 status: Draft
@@ -9,16 +9,16 @@ author: Lead Technical Writer
 last_updated: 2026-07-05
 
 depends_on:
-  - roadmap/mvp
-  - roadmap/vertical-slice
-  - roadmap/alpha
-  - roadmap/beta
-  - foundation/readme
-  - foundation/why
-  - foundation/principles
+  - 09-roadmap/mvp
+  - 09-roadmap/vertical-slice
+  - 09-roadmap/alpha
+  - 09-roadmap/beta
+  - 00-foundation/readme
+  - 00-foundation/why
+  - 00-foundation/principles
 
 used_by:
-  - roadmap/future-expansions
+  - 09-roadmap/future-expansions
   - All implementation planning
 
 tags:
@@ -96,7 +96,7 @@ All documentation must be finalized and release-ready:
 
 ## Out of Scope for Release
 
-- Post-launch features and expansions (roadmap/future-expansions)
+- Post-launch features and expansions (09-roadmap/future-expansions)
 - Live service infrastructure beyond basic error monitoring
 - Community management tooling
 - Content updates or seasonal events
@@ -162,8 +162,8 @@ All documentation must be finalized and release-ready:
 
 # Related Documents
 
-- `roadmap/mvp` through `roadmap/beta` — Predecessor milestones
-- `roadmap/future-expansions` — Future Expansions (successor)
+- `09-roadmap/mvp` through `09-roadmap/beta` — Predecessor milestones
+- `09-roadmap/future-expansions` — Future Expansions (successor)
 - `00-foundation/Why.md` — Emotional goal the release must deliver
 - `01-vision/Vision Statement.md` — Vision the release must realize
 - `01-vision/Design Pillars.md` — Pillars the release must uphold
