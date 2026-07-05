@@ -70,7 +70,7 @@ One of the six design pillars. Rich systems with low stress. No unnecessary micr
 
 ---
 
-### Desire Path
+### Desired Path
 
 A dirt path that villagers naturally create by repeatedly walking between important locations. These paths become visible over time. The player can pave them into roads. This mechanic illustrates the project philosophy: the simulation teaches the player, and the player improves the simulation.
 

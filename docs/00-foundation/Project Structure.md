@@ -74,23 +74,23 @@ the-long-reign/
 
 # Directory Purposes
 
-| Directory | Purpose |
-|-----------|---------|
-| `00-foundation/` | Project constitution — must be read first |
-| `01-vision/` | High-level vision and creative direction |
-| `02-gameplay/` | Detailed gameplay systems and mechanics |
-| `03-simulation/` | Simulation design — villagers, heroes, time |
-| `04-economy/` | Economy, production chains, resources, trade |
-| `05-world/` | World map, regions, capital, colonies |
-| `06-ui/` | User interface design, HUD, menus, accessibility |
-| `07-art/` | Art direction, pixel art style, animation, audio |
-| `08-technical/` | Architecture, technology stack, coding standards |
-| `09-roadmap/` | Milestones, releases, future expansions |
-| `10-decisions/` | Architectural Decision Records (ADRs) |
-| `11-rfc/` | Request for Comments — proposed new systems |
-| `glossary/` | Expanded glossary — one file per term |
-| `parking-lot/` | Future mechanics and interesting ideas — not committed |
-| `templates/` | Reusable document templates |
+| Directory        | Purpose                                                |
+| ---------------- | ------------------------------------------------------ |
+| `00-foundation/` | Project constitution — must be read first              |
+| `01-vision/`     | High-level vision and creative direction               |
+| `02-gameplay/`   | Detailed gameplay systems and mechanics                |
+| `03-simulation/` | Simulation design — villagers, heroes, time            |
+| `04-economy/`    | Economy, production chains, resources, trade           |
+| `05-world/`      | World map, regions, capital, colonies                  |
+| `06-ui/`         | User interface design, HUD, menus, accessibility       |
+| `07-art/`        | Art direction, pixel art style, animation, audio       |
+| `08-technical/`  | Architecture, technology stack, coding standards       |
+| `09-roadmap/`    | Milestones, releases, future expansions                |
+| `10-decisions/`  | Architectural Decision Records (ADRs)                  |
+| `11-rfc/`        | Request for Comments — proposed new systems            |
+| `glossary/`      | Expanded glossary — one file per term                  |
+| `parking-lot/`   | Future mechanics and interesting ideas — not committed |
+| `templates/`     | Reusable document templates                            |
 
 ---
 
@@ -147,6 +147,7 @@ A document must not depend on a document in a higher-numbered directory.
 - TODO: Source code directory structure (`src/`) — not yet specified
 - TODO: Test directory structure (`tests/`) — not yet specified
 - TODO: Whether `README.md` at the project root should duplicate or reference `docs/00-foundation/README.md`
+  **Answer:** No, root README will be a general introduction/presentation and only refer to `docs/` for technical information.
 - TODO: Tooling for enforcing dependency rules (e.g., CI check that a doc in `02-gameplay/` doesn't list a dependency on `04-economy/`)
 
 ---

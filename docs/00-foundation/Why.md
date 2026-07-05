@@ -67,14 +67,18 @@ The core fantasy is not combat, collection, or optimization. It is:
 
 # What the Game Is Not
 
-The Long Reign is not:
+The Long Reign rejects certain genres, mechanics, and design patterns by design. These are not accidental omissions — they are intentional boundaries that protect the project's vision.
 
-- An idle game
-- A hero collector RPG
-- A competitive multiplayer game
-- A game designed around monetization
-- A game that punishes players for taking breaks
-- A clone of any existing commercial game
+| Category             | Exclusion                              | Rationale                                                                              |
+| -------------------- | -------------------------------------- | -------------------------------------------------------------------------------------- |
+| **Genre**            | Not an idle game or hero collector RPG | The settlement is the protagonist, not heroes. Progression is active, not passive.     |
+| **Multiplayer**      | Not competitive multiplayer            | The kingdom is a personal space. No PvP, no leaderboards, no shared worlds.            |
+| **Monetization**     | Not designed around monetization       | No premium currency, battle passes, energy systems, or any payment mechanics.          |
+| **Player treatment** | Does not punish breaks                 | No decay, no FOMO, no catch-up pressure. The kingdom waits patiently.                  |
+| **Derivation**       | Not a clone of any existing game       | Original concept evolved from initial inspiration, not a reproduction.                 |
+| **Simulation**       | No offline progress simulation         | Time stops when the game is closed. The world does not advance without the player.     |
+| **Narrative**        | No scripted campaigns                  | Stories emerge from simulation, not from authored quests or cutscenes.                 |
+| **Combat**           | Not real-time combat                   | Turn-based, mostly automatic combat that supports settlement growth — not replaces it. |
 
 ---
 
@@ -89,21 +93,14 @@ The Long Reign is not:
 
 ---
 
-# Non-Goals
-
-- Competitive multiplayer
-- Monetization mechanics
-- Offline progress simulation
-- Scripted narrative campaigns
-- Real-time combat
-
----
-
 # Open Questions
 
-- TODO: Target platform specifics beyond "browser-based" (pure web, Electron wrapper, etc.)
-- TODO: Monetization model (if any) — the source material explicitly rejects premium currency, battle passes, and energy systems, but does not state whether the game is free, paid, or donation-based
-- TODO: Target audience scope (casual, mid-core, etc.)
+- **TODO**: Target platform specifics beyond "browser-based" (pure web, Electron wrapper, etc.)
+  **Answer**: pure web for now
+- **TODO**: Monetization model (if any) — the source material explicitly rejects premium currency, battle passes, and energy systems, but does not state whether the game is free, paid, or donation-based
+  **Answer**: Free. No monetization other than *possibly* Github sponsors or a Ko-Fi link, but that will be entirely optional if it's even added. The game itself will be 100% free and open source.
+- **TODO**: Target audience scope (casual, mid-core, etc.)
+  **Answer**: Casual.
 
 ---
 

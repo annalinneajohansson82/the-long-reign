@@ -1,6 +1,5 @@
 ---
 title:
-id:
 version: 0.1.0
 status: Draft
 

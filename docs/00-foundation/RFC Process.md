@@ -91,13 +91,13 @@ RFCs are stored in `docs/11-rfc/` using the RFC template (`docs/templates/RFC Te
 
 RFCs and ADRs serve different purposes, but they are linked: an RFC is **required** before an ADR can be created. The RFC explores and proposes; the ADR records and constrains.
 
-| | RFC | ADR |
-|---|---|---|
-| Purpose | Propose and explore | Record and constrain |
-| Timing | Before a decision | After a decision |
-| Mutability | Can be revised during discussion | Immutable once accepted |
-| Statuses | Draft, Accepted, Rejected, Deferred | Proposed, Accepted, Deprecated |
-| Storage | `11-rfc/` | `10-decisions/` |
+|            | RFC                                 | ADR                            |
+| ---------- | ----------------------------------- | ------------------------------ |
+| Purpose    | Propose and explore                 | Record and constrain           |
+| Timing     | Before a decision                   | After a decision               |
+| Mutability | Can be revised during discussion    | Immutable once accepted        |
+| Statuses   | Draft, Accepted, Rejected, Deferred | Proposed, Accepted, Deprecated |
+| Storage    | `11-rfc/`                           | `10-decisions/`                |
 
 An accepted RFC leads to one or more ADRs that record the specific architectural decisions made as a result.
 
@@ -154,8 +154,8 @@ Coding should never begin before the relevant specifications exist.
 # Open Questions
 
 - TODO: RFC numbering scheme
-- TODO: Who can accept or reject an RFC?
-- TODO: Time limit on RFC discussion before a decision must be made?
+- TODO: Who can accept or reject an RFC? **Answer**: Human or Chief Engineer
+- TODO: Time limit on RFC discussion before a decision must be made? **Answer:** none
 - TODO: Process for reviving a Deferred RFC
 
 ---
