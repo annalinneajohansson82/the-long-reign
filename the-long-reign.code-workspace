@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"name": "Project Root",
+			"path": "."
+		},
+		{
+			"name": "Obsidian: The Long Reign",
+			"path": "../../Obsidian/Projects/The Long Reign"
+		}
+	],
+	"settings": {
+		"markdownlint.config": {
+			"MD013": false,
+			"MD033": false
+		},
+		"files.exclude": {
+			"**/.git": true
+		},
+		"search.exclude": {
+			"**/.ai-cache": true,
+			"**/.ai-history": true,
+			"**/.ai-temp": true
+		},
+		"editor.fontSize": 15,
+		"editor.formatOnSave": true,
+		"files.autoSave": "afterDelay",
+		"editor.fontFamily": "'Space Mono', monospace",
+		"chat.agent.maxRequests": 5,
+		"workbench.colorTheme": "Sweet Dracula Monokai"
+	},
+	"extensions": {
+		"recommendations": [
+			"yzhang.markdown-all-in-one",
+			"bierner.markdown-yaml-preamble",
+			"davidanson.vscode-markdownlint"
+		]
+	}
+}
