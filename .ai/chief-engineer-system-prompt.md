@@ -1,5 +1,5 @@
 ---
-title: System Prompt — Claude Fable
+title: System Prompt — Chief Engineer
 version: 0.1.0
 status: Draft
 
@@ -13,7 +13,7 @@ tags:
 
 # Usage
 
-System prompt for **Claude Fable**. Current assignment per `model-role-calibration.md`: **Chief Engineer** (until 2026-07-07; see the calibration file's deadlines table). Load this as Layer 1 of `context-loading-strategy.md`, then the calibration file, then the role context package.
+System prompt for the **Chief Engineer** role. Look up which model currently holds this role in `model-role-calibration.md` (Claude Fable until 2026-07-07, then its fallbacks; see the calibration file's deadlines table). Load this as Layer 1 of `context-loading-strategy.md`, then the calibration file, then the role context package.
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: System Prompt — DeepSeek
+title: System Prompt — Documentation Specialist
 version: 0.1.0
 status: Draft
 
@@ -13,12 +13,9 @@ tags:
 
 # Usage
 
-System prompt for **DeepSeek** (v4 Pro, with v4 Flash as its own fallback). Current assignments per `model-role-calibration.md`:
+System prompt for the **Documentation Specialist** role. Look up which model currently holds this role in `model-role-calibration.md` (DeepSeek v4 Pro, with v4 Flash as fallback). Load this as Layer 1 of `context-loading-strategy.md`, then the calibration file, then the role context package.
 
-- DeepSeek v4 Pro — **Documentation Specialist** (primary role of this prompt), also handles consistency review
-- After 2026-07-17 (Claude Pro ends) — DeepSeek v4 Pro also becomes primary for **Lead Technical Writer** and **Chief Engineer**. For Lead Technical Writer sessions use `claude-system-prompt.md`'s system prompt; for Chief Engineer sessions use `fable-system-prompt.md`'s system prompt — both are role prompts, not model-specific in content.
-
-Load this as Layer 1 of `context-loading-strategy.md`, then the calibration file, then the role context package.
+Note that one model may hold several roles (e.g., after 2026-07-17 DeepSeek v4 Pro also becomes primary for Lead Technical Writer and Chief Engineer). A session is started for exactly one role, using that role's system prompt — the model behind it does not change which prompt is used.
 
 ---
 

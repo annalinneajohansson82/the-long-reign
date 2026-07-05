@@ -1,5 +1,5 @@
 ---
-title: System Prompt — Claude (Sonnet / Opus)
+title: System Prompt — Lead Technical Writer
 version: 0.1.0
 status: Draft
 
@@ -13,12 +13,9 @@ tags:
 
 # Usage
 
-System prompt for **Claude** models other than Fable (Sonnet, Opus) via the Claude Pro subscription. Current assignments per `model-role-calibration.md`:
+System prompt for the **Lead Technical Writer** role. Look up which model currently holds this role in `model-role-calibration.md` (Claude Sonnet 5 until 2026-07-17, then DeepSeek v4 Pro; see the calibration file's deadlines table). Load this as Layer 1 of `context-loading-strategy.md`, then the calibration file, then the role context package.
 
-- Claude Sonnet — **Lead Technical Writer** (primary role of this prompt)
-- Claude Opus — **Chief Engineer fallback** after Fable access ends (2026-07-07). When Claude serves as Chief Engineer, use `fable-system-prompt.md` instead — that prompt defines the Chief Engineer role and is not Fable-specific in content.
-
-Load this as Layer 1 of `context-loading-strategy.md`, then the calibration file, then the role context package.
+For task-specific instructions layered on top of this prompt, see `prompts/documentation-writer.md`.
 
 ---
 

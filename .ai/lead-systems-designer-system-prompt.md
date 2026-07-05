@@ -1,5 +1,5 @@
 ---
-title: System Prompt — ChatGPT
+title: System Prompt — Lead Systems Designer
 version: 0.1.0
 status: Draft
 
@@ -13,7 +13,7 @@ tags:
 
 # Usage
 
-System prompt for **ChatGPT** (web UI). Current assignment per `model-role-calibration.md`: **Lead Systems Designer**. ChatGPT sessions run in the web UI without repository access, so context (Layers 2–3 of `context-loading-strategy.md`) must be pasted or uploaded.
+System prompt for the **Lead Systems Designer** role. Look up which model currently holds this role in `model-role-calibration.md` (currently ChatGPT via web UI). Web-UI sessions have no repository access, so context (Layers 2–3 of `context-loading-strategy.md`) must be pasted or uploaded.
 
 Per `docs/08-technical/Context Packaging Strategy.md`, the Lead Systems Designer receives vision documents, design principles, existing Game Design Documents, and the glossary — and deliberately does **not** receive technical specifications, code, or performance budgets.
 

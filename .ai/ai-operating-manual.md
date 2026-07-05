@@ -39,7 +39,7 @@ Pick the role  →  Pick the model  →  Load the session  →  Work  →  Hand 
 
 1. Identify the task type and look up its owner in the Routing Table (`AI Routing Policy.md`).
 2. Look up the current model for that role in `model-role-calibration.md`. Check the *Deadlines & Replacements* table — if a deadline has passed, use the fallback and update the calibration file.
-3. Load the model's system prompt from this directory (`<model>-system-prompt.md`).
+3. Load the role's system prompt from this directory (`<role>-system-prompt.md`).
 4. Assemble the context package for the role per `docs/08-technical/Context Packaging Strategy.md` and load it in the order given by `context-loading-strategy.md`.
 5. State the task using the Context Packaging Format: task description, required documents, optional documents, constraints, acceptance criteria.
 
@@ -64,7 +64,7 @@ Pick the role  →  Pick the model  →  Load the session  →  Work  →  Hand 
 
 # Maintaining This Setup
 
-- When a provider, subscription, or model changes: update `model-role-calibration.md` first, then check whether the affected `<model>-system-prompt.md` still matches the roles that model can hold.
+- When a provider, subscription, or model changes: update `model-role-calibration.md` first, then check whether the affected role's `<role>-system-prompt.md` Usage note still describes the current assignment. The prompt bodies are model-agnostic and should not need changes.
 - When roles or responsibilities change: that is a change to `AI Development Workflow.md` / `AI Routing Policy.md` and requires human approval (Routing Rule 5). Files in `.ai/` only follow.
 
 ---

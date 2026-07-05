@@ -33,19 +33,19 @@ The files here are the *mechanism*: what you actually paste into a session to ma
 | `model-role-calibration.md` | Current mapping of roles → models/providers, with subscription deadlines |
 | `context-loading-strategy.md` | Practical loading order: what to load into a session, in what sequence |
 | `handoff-template.md` | Template for ending a session so the next session (possibly a different model) can resume |
-| `chatgpt-system-prompt.md` | System prompt for ChatGPT — Lead Systems Designer |
-| `claude-system-prompt.md` | System prompt for Claude (Sonnet/Opus) — Lead Technical Writer, Chief Engineer fallback |
-| `fable-system-prompt.md` | System prompt for Claude Fable — Chief Engineer |
-| `deepseek-system-prompt.md` | System prompt for DeepSeek — Documentation Specialist, long-term fallback for other roles |
+| `lead-systems-designer-system-prompt.md` | System prompt for the Lead Systems Designer role |
+| `lead-technical-writer-system-prompt.md` | System prompt for the Lead Technical Writer role |
+| `chief-engineer-system-prompt.md` | System prompt for the Chief Engineer role |
+| `documentation-specialist-system-prompt.md` | System prompt for the Documentation Specialist role |
 | `prompts/` | Task-specific prompts (e.g., `documentation-writer.md`) layered on top of a system prompt |
 
 ---
 
 # Conventions
 
-- System prompts are **per model**, because each model may hold different roles as subscriptions change. Each prompt tells the model to confirm its current role against `model-role-calibration.md` at session start.
+- System prompts are **per role**, because roles are stable while models change as subscriptions lapse. Which model to run a role's prompt on is looked up in `model-role-calibration.md` — that file is the only place model names appear as assignments. Each prompt also tells the model to confirm the assignment against the calibration file at session start.
 - Task prompts in `prompts/` are **per task**, and assume a system prompt has already established the role.
-- Documentation uses role names, not model names (see `docs/00-foundation/Documentation Standards.md`). Model names appear only here in `.ai/`, where the mapping is the point.
+- Documentation uses role names, not model names (see `docs/00-foundation/Documentation Standards.md`). The same convention applies here: model names appear only in `model-role-calibration.md`, where the mapping is the point.
 
 ---
 

@@ -23,7 +23,7 @@ Current assignments mapping project roles (defined in `08-technical/AI Developme
 | -------------------------- | ------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | Creative Director          | Human (Anna)                    | —                                | Final authority on all decisions                                                                            |
 | Lead Systems Designer      | ChatGPT                         | —                                | Web UI; creative exploration, not documentation                                                             |
-| Lead Technical Writer      | Claude Sonnet 4.7 | DeepSeek v4 Pro                  | Claude Pro subscription until Jul 17, 2026; switch to DeepSeek after                                               |
+| Lead Technical Writer      | Claude Sonnet 5 | DeepSeek v4 Pro                  | Claude Pro subscription until Jul 17, 2026; switch to DeepSeek after                                               |
 | Documentation Specialist   | DeepSeek v4 Pro      | DeepSeek v4 Flash                | Also handles consistency review                                                                             |
 | Chief Engineer             | Claude Fable                    | Claude Opus 4.8, DeepSeek v4 Pro | Fable available until Jul 7, 2026; Opus after that until July 17 2026, switch to DeepSeek V4 Pro after that |
 | Frontend Agent             | Via Chief Engineer              | —                                | Delegated by Chief Engineer                                                                                 |
