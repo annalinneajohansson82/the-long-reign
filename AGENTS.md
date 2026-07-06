@@ -1,7 +1,7 @@
 ## Git & GitHub identity
 
 All automated git commits, PR creation, and PR reviews use the machine user identity
-(`hermes-agent-annajohansson`) configured in `.env`. Before ANY `git commit`, `git push`,
+(`$HERMES_MACHINE_USER_NAME`) configured in `.env`. Before ANY `git commit`, `git push`,
 `gh pr create`, `gh pr review`, or GitHub API call directed at this repo, source the
 project environment:
 
@@ -65,7 +65,7 @@ Examples:
 - `This could be drier. — Lead Technical Writer`
 - `Timeout should be configurable. — Spot Check`
 
-The header is the only differentiation — the GitHub account is always `hermes-agent-annajohansson`.
+The header is the only differentiation — the GitHub account is always `$HERMES_MACHINE_USER_NAME`.
 
 ## PR auto-review
 
