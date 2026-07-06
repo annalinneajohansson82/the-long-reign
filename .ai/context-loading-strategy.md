@@ -34,7 +34,7 @@ Loading order matters: the role must be established before any project content i
 
 # Layer 1 — System Prompt
 
-Load the role's system prompt from `.ai/<role>-system-prompt.md` (e.g. `chief-engineer-system-prompt.md`). Which model to run it on is looked up in `model-role-calibration.md`; the prompt instructs the model to confirm that assignment at session start.
+Load the role's system prompt from `.ai/system-prompts/<role>-system-prompt.md` (e.g. `chief-engineer-system-prompt.md`). Which model to run it on is looked up in `model-role-calibration.md`; the prompt instructs the model to confirm that assignment at session start.
 
 # Layer 2 — Calibration
 

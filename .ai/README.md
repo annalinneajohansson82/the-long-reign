@@ -33,10 +33,7 @@ The files here are the *mechanism*: what you actually paste into a session to ma
 | `model-role-calibration.md` | Current mapping of roles → models/providers, with subscription deadlines |
 | `context-loading-strategy.md` | Practical loading order: what to load into a session, in what sequence |
 | `handoff-template.md` | Template for ending a session so the next session (possibly a different model) can resume |
-| `lead-systems-designer-system-prompt.md` | System prompt for the Lead Systems Designer role |
-| `lead-technical-writer-system-prompt.md` | System prompt for the Lead Technical Writer role |
-| `chief-engineer-system-prompt.md` | System prompt for the Chief Engineer role |
-| `documentation-specialist-system-prompt.md` | System prompt for the Documentation Specialist role |
+| `system-prompts/` | System prompts for all four roles (Lead Systems Designer, Lead Technical Writer, Chief Engineer, Documentation Specialist) |
 | `session-re-entry.md` | Quick-reorientation for the human: current focus, what to tackle next |
 
 
