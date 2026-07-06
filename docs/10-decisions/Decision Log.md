@@ -6,7 +6,7 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - 00-foundation/readme
@@ -36,19 +36,21 @@ Each entry includes the full ADR content: context, decision, consequences, and a
 
 | ID | Title | Status | Date |
 |----|-------|--------|------|
-| ADR-001 | Single-Player Forever | Accepted | 2026-07-05 |
-| ADR-002 | No Monetization | Accepted | 2026-07-05 |
-| ADR-003 | No Offline Progress | Accepted | 2026-07-05 |
-| ADR-004 | Respect the Player's Time as a Design Pillar | Accepted | 2026-07-05 |
-| ADR-005 | Specification-First Development | Accepted | 2026-07-05 |
-| ADR-006 | Browser-Based Platform | Accepted | 2026-07-05 |
-| ADR-007 | Settlement as Protagonist | Accepted | 2026-07-05 |
-| ADR-008 | Documentation as Source of Truth | Accepted | 2026-07-05 |
-| ADR-009 | ADR/RFC Process Adoption | Accepted | 2026-07-05 |
+| ADR-2026-001 | Single-Player Forever | Accepted | 2026-07-05 |
+| ADR-2026-002 | No Monetization | Accepted | 2026-07-05 |
+| ADR-2026-003 | No Offline Progress | Accepted | 2026-07-05 |
+| ADR-2026-004 | Respect the Player's Time as a Design Pillar | Accepted | 2026-07-05 |
+| ADR-2026-005 | Specification-First Development | Accepted | 2026-07-05 |
+| ADR-2026-006 | Browser-Based Platform | Accepted | 2026-07-05 |
+| ADR-2026-007 | Settlement as Protagonist | Accepted | 2026-07-05 |
+| ADR-2026-008 | Documentation as Source of Truth | Accepted | 2026-07-05 |
+| ADR-2026-009 | ADR/RFC Process Adoption | Accepted | 2026-07-05 |
+
+> **Note:** IDs use the `ADR-YYYY-XXX` format defined in `00-foundation/ADR Process.md` (Resolved Questions). These 9 foundation ADRs were created directly from brainstorming sessions and are retroactively exempt from the RFC prerequisite (`ADR Process.md`, "When to Write an ADR").
 
 ---
 
-# ADR-001: Single-Player Forever
+# ADR-2026-001: Single-Player Forever
 
 **Status:** Accepted
 **Date:** 2026-07-05
@@ -74,7 +76,7 @@ The Long Reign will be single-player forever. No multiplayer features — compet
 
 ---
 
-# ADR-002: No Monetization
+# ADR-2026-002: No Monetization
 
 **Status:** Accepted
 **Date:** 2026-07-05
@@ -87,7 +89,7 @@ The project's philosophy centers on the player returning because they _want_ to,
 
 The Long Reign will include no monetization mechanics of any kind. Specifically prohibited: premium currency, soft currency purchases, battle passes, energy systems, daily reward incentives, loot boxes, gacha mechanics, and any pay-to-accelerate or pay-to-cosmetics system.
 
-Note: The source material does not specify whether the game itself will be free, paid, or donation-based. That is an unresolved business-model question separate from this architectural decision, which constrains only in-game mechanics.
+Note: The business-model question (separate from this architectural decision, which constrains only in-game mechanics) is resolved in `00-foundation/Why.md` (Open Questions): the game itself will be 100% free and open source, with no monetization beyond a possible, entirely optional GitHub Sponsors or Ko-fi link.
 
 ## Consequences
 
@@ -102,7 +104,7 @@ Note: The source material does not specify whether the game itself will be free,
 
 ---
 
-# ADR-003: No Offline Progress
+# ADR-2026-003: No Offline Progress
 
 **Status:** Accepted
 **Date:** 2026-07-05
@@ -128,7 +130,7 @@ Time stops while the game is closed. No progress — resource accumulation, vill
 
 ---
 
-# ADR-004: Respect the Player's Time as a Design Pillar
+# ADR-2026-004: Respect the Player's Time as a Design Pillar
 
 **Status:** Accepted
 **Date:** 2026-07-05
@@ -165,7 +167,7 @@ The kingdom patiently waits. The player returns because they want to.
 
 ---
 
-# ADR-005: Specification-First Development
+# ADR-2026-005: Specification-First Development
 
 **Status:** Accepted
 **Date:** 2026-07-05
@@ -199,7 +201,7 @@ Coding is intentionally placed near the end of the development workflow. The ful
 
 ---
 
-# ADR-006: Browser-Based Platform
+# ADR-2026-006: Browser-Based Platform
 
 **Status:** Accepted
 **Date:** 2026-07-05
@@ -227,11 +229,11 @@ The Long Reign will be a browser-based game. It will run in a web browser using 
 ## Open Questions
 
 - TODO: Target browsers and minimum versions
-- TODO: Whether an Electron wrapper will be offered as a packaged distribution option
+- **Resolved:** Whether an Electron wrapper will be offered as a packaged distribution option. `00-foundation/Why.md` (Open Questions) confirms the target platform is pure web for now; no Electron wrapper is planned.
 
 ---
 
-# ADR-007: Settlement as Protagonist
+# ADR-2026-007: Settlement as Protagonist
 
 **Status:** Accepted
 **Date:** 2026-07-05
@@ -257,7 +259,7 @@ The settlement — not heroes, not combat — is the protagonist of The Long Rei
 
 ---
 
-# ADR-008: Documentation as Source of Truth
+# ADR-2026-008: Documentation as Source of Truth
 
 **Status:** Accepted
 **Date:** 2026-07-05
@@ -283,7 +285,7 @@ Documentation is the source of truth for The Long Reign. If implementation confl
 
 ---
 
-# ADR-009: ADR/RFC Process Adoption
+# ADR-2026-009: ADR/RFC Process Adoption
 
 **Status:** Accepted
 **Date:** 2026-07-05
@@ -315,10 +317,10 @@ The project adopts Architectural Decision Records (ADRs) and Request for Comment
 
 # Open Questions
 
-- TODO: ADR numbering scheme — currently sequential (ADR-001, ADR-002) but ADR Process.md notes this is unresolved. Could shift to year-prefixed (ADR-2026-001) if preferred.
-- TODO: Formal approval process — who must sign off on an ADR before it is Accepted?
-- TODO: Whether ADRs require an RFC before being created (the first nine were created from brainstorming material without formal RFCs)
-- TODO: Process for deprecating an ADR — what level of justification is required?
+- **Resolved:** ADR numbering scheme. `00-foundation/ADR Process.md` (Resolved Questions) specifies the `ADR-YYYY-XXX` format. IDs in this log have been updated to `ADR-2026-001` through `ADR-2026-009` accordingly.
+- **Resolved:** Formal approval process. `00-foundation/ADR Process.md` (Approval Tiers) defines a three-tier system: Constitutional and Design ADRs require human sign-off; Technical ADRs use agent-propose / human-veto with a 7-day review window.
+- **Resolved:** Whether ADRs require an RFC before being created. `00-foundation/ADR Process.md` (Resolved Questions, "RFC prerequisite") confirms an RFC is required before every ADR except the 9 foundation ADRs (ADR-2026-001–ADR-2026-009), which are retroactively exempt.
+- TODO: Process for deprecating an ADR — what level of justification is required? `00-foundation/ADR Process.md` (ADR Lifecycle) states a Deprecated ADR must be superseded by a later ADR that explicitly replaces it, but does not define a required justification threshold.
 
 ---
 
