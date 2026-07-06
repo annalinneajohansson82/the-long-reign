@@ -43,7 +43,11 @@ workspace, it performs these checks proactively without waiting for a trigger:
 
 1. Read `.ai/session-re-entry.md` for the current focus and open questions from the previous session.
 2. Run `git log --oneline -5` and `git status --short` to reconstruct recent activity.
-3. Source `.env` and run `gh api notifications --jq '.[] | "\(.subject.title) — \(.repository.full_name) — \(.reason)"'` to check for new GitHub notifications for the machine user. Report any unread notifications.
+3. Source `.env` and check for unread GitHub notifications for the machine user:
+   ```bash
+   gh api notifications --jq '.[] | "\(.subject.title) — \(.repository.full_name) — \(.reason)"'
+   ```
+   Report any unread notifications. Do NOT mark them as read.
 4. Check `.ai/handoffs/` for the most recent handoff document. If one exists, read it. If no handoff exists since the last commit on `main`, run `git log --since=<YYYY-MM-DD>` (ISO 8601 date of last handoff or last session) to reconstruct what changed.
 5. Review the gathered context with the human — session-re-entry.md is a rough jot, not authoritative. Discuss and update it together.
 6. Identify the task type and look up its owner in the Routing Table (`AI Routing Policy.md`).
