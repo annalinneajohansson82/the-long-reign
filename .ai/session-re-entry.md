@@ -1,18 +1,25 @@
 ---
-title: Action List
-id: action-list
+title: Session Re-Entry
+id: session-re-entry
 version: 0.1.0
 status: Active
 author: Hermes
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 tags:
-  - project-management
-  - tasks
+  - ops
+  - session
+  - focus
 ---
 
 # Purpose
 
-Cross-cutting action items that need doing but aren't tied to a specific milestone or roadmap phase. Items here are pre-requisites, research tasks, or organisational work.
+Quick-reorientation document for the human. Read this at the start of a session to get back in the loop: current focus, what to tackle next, and any open questions from previous sessions.
+
+---
+
+# Current Focus
+
+<!-- Update this section each session to reflect what's being worked on right now -->
 
 ---
 
@@ -37,3 +44,9 @@ Considerations:
 - Audio direction alignment (see `docs/07-art/Audio.md`)
 - Whether custom assets are preferable for visual consistency
 - Document findings and recommendations in `docs/07-art/` or a new sub-page
+
+---
+
+# Open Questions
+
+<!-- Track anything unanswered from the previous session that needs resolving -->
