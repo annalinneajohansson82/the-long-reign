@@ -143,10 +143,10 @@ These features are explicitly deferred from the MVP but scoped for future consid
 
 # Related Documents
 
-- `Buildings.md` — building types, costs, tiers, visual pool
-- `Resources.md` — resource and gathering mechanics
-- `08-technical/MVP-Technical-Specification.md` — implementation specification
-- `08-technical/Architecture.md` — overall technical architecture
-- `08-technical/Data Models.md` — entity data models
-- `00-foundation/Glossary.md` — shared vocabulary
-- `00-foundation/Principles.md` — design pillars
+- `02-gameplay/buildings` — building types, costs, tiers, visual pool
+- `02-gameplay/resources` — resource and gathering mechanics
+- `08-technical/mvp-technical-specification` — implementation specification
+- `08-technical/architecture` — overall technical architecture
+- `08-technical/data-models` — entity data models
+- `00-foundation/glossary` — shared vocabulary
+- `00-foundation/principles` — design pillars

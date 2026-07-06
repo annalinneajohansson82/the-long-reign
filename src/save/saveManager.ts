@@ -6,7 +6,7 @@ export function saveGame(state: GameState): void {
   try {
     localStorage.setItem(SAVE_KEY, JSON.stringify(state));
   } catch {
-    // Storage quota exceeded — silently fail
+    // Storage quota exceeded
   }
 }
 
@@ -15,11 +15,7 @@ export function loadGame(): GameState | null {
     const data = localStorage.getItem(SAVE_KEY);
     if (data) return JSON.parse(data) as GameState;
   } catch {
-    // Corrupt or missing save
+    // Corrupt or missing
   }
   return null;
-}
-
-export function clearSave(): void {
-  localStorage.removeItem(SAVE_KEY);
 }

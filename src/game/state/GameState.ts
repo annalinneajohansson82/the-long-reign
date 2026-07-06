@@ -3,8 +3,6 @@ import type { Building, BuildingType } from '../entities/building';
 import type { Villager } from '../entities/villager';
 import { BUILDING_DEFINITIONS, HOUSE_CAP, VISUAL_VARIANT_COUNT } from '../entities/building';
 
-// ─── Game State ──────────────────────────────────────────────────────────
-
 export interface GameState {
   phase: 'placingTownHall' | 'playing';
   grid: Grid;
@@ -24,28 +22,22 @@ export interface GameState {
   saplings: Array<{ x: number; y: number; growthTimer: number }>;
 }
 
-// ─── Actions ─────────────────────────────────────────────────────────────
-
 export type GameAction =
   | { type: 'INIT_GAME' }
   | { type: 'START_PLACING'; buildingType: BuildingType }
   | { type: 'CANCEL_PLACING' }
   | { type: 'PLACE_BUILDING'; x: number; y: number }
-  | { type: 'UPGRADE_BUILDING'; buildingId: string }
+  | { type: 'UPGRADE_BUILDING'; buildingId: string; variantSeed: number }
   | { type: 'GATHER'; x: number; y: number }
   | { type: 'SELECT_BUILDING'; buildingId: string | null }
-  | { type: 'TICK' }
+  | { type: 'TICK'; foresterPick: number }
   | { type: 'SAVE' }
   | { type: 'LOAD' };
-
-// ─── Constants ───────────────────────────────────────────────────────────
 
 const GATHER_ANIM_DURATION = 60;
 const SAPLING_GROWTH_TIME = 1800;
 const FORESTER_INTERVAL = 1800;
 const FORESTER_RADIUS = 5;
-
-// ─── Reducer ─────────────────────────────────────────────────────────────
 
 export function gameReducer(state: GameState, action: GameAction): GameState {
   switch (action.type) {
@@ -70,39 +62,26 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
       const def = BUILDING_DEFINITIONS.find((b) => b.type === buildingType);
       if (!def) return state;
 
-      // Town hall placement
       if (buildingType === 'townHall' && state.phase === 'placingTownHall') {
         const newBuilding: Building = {
           id: `building-${state.gameTime}`,
-          type: 'townHall',
-          tier: 1,
-          visualVariant: 0,
-          x,
-          y,
+          type: 'townHall', tier: 1, visualVariant: 0, x, y,
         };
-        const newGrid = gridWithOccupied(state.grid, x, y, newBuilding.id);
         return {
-          ...state,
-          phase: 'playing',
-          grid: newGrid,
+          ...state, phase: 'playing',
+          grid: gridWithOccupied(state.grid, x, y, newBuilding.id),
           buildings: [...state.buildings, newBuilding],
-          isPlacing: false,
-          selectedBuildingType: null,
+          isPlacing: false, selectedBuildingType: null,
           wood: state.wood - def.baseCost,
         };
       }
 
-      // House cap check
       if (buildingType === 'house' && state.houseCount >= state.houseCap) return state;
       if (state.wood < def.baseCost) return state;
 
       const newBuilding: Building = {
         id: `building-${state.gameTime}`,
-        type: buildingType,
-        tier: 1,
-        visualVariant: 0,
-        x,
-        y,
+        type: buildingType, tier: 1, visualVariant: 0, x, y,
       };
 
       return {
@@ -112,8 +91,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         wood: state.wood - def.baseCost,
         houseCount: buildingType === 'house' ? state.houseCount + 1 : state.houseCount,
         foresterPlaced: buildingType === 'forester' || state.foresterPlaced,
-        isPlacing: false,
-        selectedBuildingType: null,
+        isPlacing: false, selectedBuildingType: null,
       };
     }
 
@@ -127,7 +105,8 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
       const cost = def.upgradeCost[building.tier];
       if (cost === undefined || state.wood < cost) return state;
 
-      const variant = Math.floor(Math.random() * VISUAL_VARIANT_COUNT);
+      // Use provided seed instead of Math.random()
+      const variant = action.variantSeed % VISUAL_VARIANT_COUNT;
       const upgraded: Building = { ...building, tier: building.tier + 1, visualVariant: variant };
 
       let newTownHallTier = state.townHallTier;
@@ -152,15 +131,22 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
       const tile = state.grid[x]?.[y];
       if (!tile || (tile.type !== 'tree' && tile.type !== 'sapling')) return state;
 
-      const idleVillager = state.villagers.find((v) => v.state === 'idle');
-      if (!idleVillager) return state;
+      // Find nearest idle villager
+      let bestVillager: Villager | null = null;
+      let bestDist = Infinity;
+      for (const v of state.villagers) {
+        if (v.state !== 'idle') continue;
+        const dist = Math.abs(v.x - x) + Math.abs(v.y - y);
+        if (dist < bestDist) { bestDist = dist; bestVillager = v; }
+      }
+      if (!bestVillager) return state;
 
-      const path = simplePath(Math.floor(idleVillager.x), Math.floor(idleVillager.y), x, y);
+      const path = findPath(state.grid, bestVillager.x, bestVillager.y, x, y);
 
       return {
         ...state,
         villagers: state.villagers.map((v) =>
-          v.id === idleVillager.id
+          v.id === bestVillager!.id
             ? { ...v, state: 'walking' as const, targetX: x, targetY: y, path, animationTimer: 0 }
             : v
         ),
@@ -177,38 +163,34 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
       const newGrid = gridClone(state.grid);
       const newVillagers = state.villagers.map((v) => ({ ...v }));
 
-      // Forester spawn
       if (state.foresterPlaced) {
         foresterTimer++;
         if (foresterTimer >= FORESTER_INTERVAL) {
           foresterTimer = 0;
           const forester = state.buildings.find((b) => b.type === 'forester');
           if (forester) {
-            const spot = findEmptyTileNear(forester.x, forester.y, state.grid, FORESTER_RADIUS);
-            if (spot) {
-              const tile = newGrid[spot.x][spot.y];
-              newGrid[spot.x][spot.y] = { ...tile, type: 'sapling', walkable: true };
+            const empty = findEmptyTilesNear(forester.x, forester.y, state.grid, FORESTER_RADIUS);
+            if (empty.length > 0) {
+              const idx = action.foresterPick % empty.length;
+              const spot = empty[idx];
+              newGrid[spot.x][spot.y] = { ...newGrid[spot.x][spot.y], type: 'sapling', walkable: true };
               saplings.push({ x: spot.x, y: spot.y, growthTimer: SAPLING_GROWTH_TIME });
             }
           }
         }
       }
 
-      // Sapling growth
       saplings = saplings
         .map((s) => ({ ...s, growthTimer: s.growthTimer - 1 }))
         .filter((s) => {
           if (s.growthTimer <= 0) {
             const tile = newGrid[s.x]?.[s.y];
-            if (tile && tile.type === 'sapling') {
-              newGrid[s.x][s.y] = { ...tile, type: 'tree' };
-            }
+            if (tile?.type === 'sapling') newGrid[s.x][s.y] = { ...tile, type: 'tree' };
             return false;
           }
           return true;
         });
 
-      // Villager movement & gathering
       for (const v of newVillagers) {
         if (v.state === 'gathering') {
           if (v.animationTimer <= 0) {
@@ -218,11 +200,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
               const room = state.stockpileCapacity - newWood;
               newWood += Math.min(room, 3);
             }
-            v.state = 'idle';
-            v.targetX = -1;
-            v.targetY = -1;
-            v.path = [];
-            v.animationTimer = 0;
+            v.state = 'idle'; v.targetX = -1; v.targetY = -1; v.path = []; v.animationTimer = 0;
           } else {
             v.animationTimer--;
           }
@@ -230,8 +208,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
           if (v.path.length > 0) {
             const [nx, ny] = v.path[0];
             v.path = v.path.slice(1);
-            v.x = nx;
-            v.y = ny;
+            v.x = nx; v.y = ny;
           }
           if (v.path.length === 0) {
             v.state = 'gathering';
@@ -241,41 +218,98 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
       }
 
       return {
-        ...state,
-        grid: newGrid,
-        villagers: newVillagers,
-        wood: newWood,
-        foresterTimer,
-        saplings,
-        gameTime: state.gameTime + 1,
+        ...state, grid: newGrid, villagers: newVillagers, wood: newWood,
+        foresterTimer, saplings, gameTime: state.gameTime + 1,
       };
     }
 
-    case 'SAVE': {
-      try {
-        localStorage.setItem('tlr-save', JSON.stringify(state));
-      } catch {
-        // quota exceeded
-      }
-      return state;
-    }
-
-    case 'LOAD': {
-      try {
-        const data = localStorage.getItem('tlr-save');
-        if (data) return JSON.parse(data) as GameState;
-      } catch {
-        // corrupt save
-      }
-      return state;
-    }
+    case 'SAVE':
+    case 'LOAD':
+      return state; // I/O handled outside the reducer in Game.dispatch
 
     default:
       return state;
   }
 }
 
-// ─── Helpers ─────────────────────────────────────────────────────────────
+// ─── A* Pathfinding ──────────────────────────────────────────────────────
+
+interface PathNode {
+  x: number; y: number; g: number; f: number;
+  parent: PathNode | null;
+}
+
+function findPath(grid: Grid, fromX: number, fromY: number, toX: number, toY: number): [number, number][] {
+  const fx = Math.floor(fromX), fy = Math.floor(fromY);
+  const tx = toX, ty = toY;
+  if (fx === tx && fy === ty) return [];
+
+  const cols = grid.length;
+  const rows = grid[0].length;
+
+  // Check bounds
+  if (tx < 0 || tx >= cols || ty < 0 || ty >= rows) return [];
+  if (fx < 0 || fx >= cols || fy < 0 || fy >= rows) return [];
+
+  const closed = new Set<string>();
+  const open: PathNode[] = [{ x: fx, y: fy, g: 0, f: heuristic(fx, fy, tx, ty), parent: null }];
+  const key = (x: number, y: number) => `${x},${y}`;
+
+  while (open.length > 0) {
+    // Sort by f-score (cheapest first)
+    open.sort((a, b) => a.f - b.f);
+    const current = open.shift()!;
+    const ck = key(current.x, current.y);
+
+    if (current.x === tx && current.y === ty) {
+      return reconstructPath(current);
+    }
+
+    closed.add(ck);
+
+    for (const [dx, dy] of [[0, -1], [0, 1], [-1, 0], [1, 0]]) {
+      const nx = current.x + dx, ny = current.y + dy;
+      if (nx < 0 || nx >= cols || ny < 0 || ny >= rows) continue;
+
+      const tile = grid[nx][ny];
+      // Allow walking onto tree/sapling tiles (the target)
+      if (!tile.walkable && !(nx === tx && ny === ty)) continue;
+
+      const nk = key(nx, ny);
+      if (closed.has(nk)) continue;
+
+      const g = current.g + 1;
+      const existing = open.find((n) => n.x === nx && n.y === ny);
+      if (existing) {
+        if (g < existing.g) {
+          existing.g = g;
+          existing.f = g + heuristic(nx, ny, tx, ty);
+          existing.parent = current;
+        }
+      } else {
+        open.push({ x: nx, y: ny, g, f: g + heuristic(nx, ny, tx, ty), parent: current });
+      }
+    }
+  }
+
+  return []; // No path found
+}
+
+function heuristic(ax: number, ay: number, bx: number, by: number): number {
+  return Math.abs(ax - bx) + Math.abs(ay - by);
+}
+
+function reconstructPath(node: PathNode): [number, number][] {
+  const path: [number, number][] = [];
+  let current: PathNode | null = node;
+  while (current?.parent) {
+    path.unshift([current.x, current.y]);
+    current = current.parent;
+  }
+  return path;
+}
+
+// ─── Grid Helpers ────────────────────────────────────────────────────────
 
 function gridClone(grid: Grid): Grid {
   return grid.map((col) => col.map((t) => ({ ...t })));
@@ -287,41 +321,13 @@ function gridWithOccupied(grid: Grid, x: number, y: number, id: string): Grid {
   return g;
 }
 
-function simplePath(
-  fromX: number,
-  fromY: number,
-  toX: number,
-  toY: number
-): [number, number][] {
-  const path: [number, number][] = [];
-  let cx = fromX;
-  let cy = fromY;
-  while (cx !== toX || cy !== toY) {
-    if (cx < toX) cx++;
-    else if (cx > toX) cx--;
-    else if (cy < toY) cy++;
-    else if (cy > toY) cy--;
-    path.push([cx, cy]);
-  }
-  return path;
-}
-
-function findEmptyTileNear(
-  cx: number,
-  cy: number,
-  grid: Grid,
-  radius: number
-): { x: number; y: number } | null {
+function findEmptyTilesNear(cx: number, cy: number, grid: Grid, radius: number): Array<{ x: number; y: number }> {
   const empty: Array<{ x: number; y: number }> = [];
   for (let dx = -radius; dx <= radius; dx++) {
     for (let dy = -radius; dy <= radius; dy++) {
-      const nx = cx + dx;
-      const ny = cy + dy;
-      const tile = grid[nx]?.[ny];
-      if (tile && tile.type === 'empty') {
-        empty.push({ x: nx, y: ny });
-      }
+      const tile = grid[cx + dx]?.[cy + dy];
+      if (tile?.type === 'empty') empty.push({ x: cx + dx, y: cy + dy });
     }
   }
-  return empty.length > 0 ? empty[Math.floor(Math.random() * empty.length)] : null;
+  return empty;
 }

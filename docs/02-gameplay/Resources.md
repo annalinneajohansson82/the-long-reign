@@ -5,8 +5,11 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 last_updated: 2026-07-05
-depends_on: []
+depends_on:
+  - 00-foundation/glossary
+  - 00-foundation/principles
 used_by:
+  - 02-gameplay/mvp
   - 02-gameplay/Production Chains.md
   - 02-gameplay/Buildings.md
   - 04-economy/Resource Flow.md

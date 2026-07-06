@@ -6,11 +6,10 @@ const ROWS = 20;
 const TREE_COUNT = 25;
 const VILLAGER_COUNT = 10;
 
-/** Generate a sparse tree distribution that leaves enough buildable space. */
+/** Generate a sparse tree distribution that clears space around center */
 function generateTrees(): Array<{ x: number; y: number }> {
   const positions: Array<{ x: number; y: number }> = [];
   const occupied = new Set<string>();
-  // Leave a 2-tile radius around center clear for town hall placement
   for (let i = 0; i < TREE_COUNT; i++) {
     let x: number, y: number, key: string;
     do {
@@ -41,7 +40,7 @@ function buildGrid(): Grid {
         y,
         type: isTree ? 'tree' : 'empty',
         occupiedBy: null,
-        walkable: !isTree,
+        walkable: true, // Trees are walkable — villagers must be able to path to them
       } as GridTile;
     }
   }

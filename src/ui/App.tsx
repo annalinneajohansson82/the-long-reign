@@ -33,7 +33,11 @@ export function App({ game }: AppProps) {
           buildingId={state.selectedBuildingId}
           buildings={state.buildings}
           wood={state.wood}
-          onUpgrade={(id) => game.dispatch({ type: 'UPGRADE_BUILDING', buildingId: id })}
+          onUpgrade={(id) => game.dispatch({
+            type: 'UPGRADE_BUILDING',
+            buildingId: id,
+            variantSeed: Math.floor(Math.random() * 1000),
+          })}
           onClose={() => game.dispatch({ type: 'SELECT_BUILDING', buildingId: null })}
         />
       )}
