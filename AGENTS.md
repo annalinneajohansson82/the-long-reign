@@ -113,6 +113,43 @@ The PR-opening agent posts a comment summarising which reviews were requested:
 Auto-review dispatched: Chief Engineer, Lead Systems Designer
 ```
 
+### PR labeling
+
+After `gh pr create`, apply three label types to the PR. Labels provide traceability
+and drive the merge tier decision.
+
+**Domain labels** (one, based on the classification table):
+
+| Label | When |
+|-------|------|
+| `domain/docs` | `docs/` files, `.md` files |
+| `domain/ai-ops` | `.ai/` files, system prompts, operating manual, AGENTS.md |
+| `domain/code` | Source code, build scripts, CI, config |
+| `domain/design` | Game mechanics, systems, design documents |
+| `domain/infra` | `.gitignore`, `.env.example`, environment config |
+
+**Size labels** (one, based on `git diff --stat`):
+
+| Label | Threshold |
+|-------|-----------|
+| `size/small` | < 50 lines changed |
+| `size/medium` | 50–200 lines changed |
+| `size/large` | 200+ lines changed |
+
+**Merge tier labels** (one, see Merge tiers below):
+
+| Label | Meaning |
+|-------|---------|
+| `merge/auto` | Agent can merge when reviews pass |
+| `merge/ack` | Agent needs human acknowledgement |
+| `merge/manual` | Human must merge manually |
+
+Apply after classification:
+
+```bash
+gh pr edit <number> --add-label domain/docs,size/small,merge/auto
+```
+
 ### Human-requested review
 
 The repo owner can also trigger a review manually ("review PR #4", "re-review PR #4 as Lead Technical Writer"). When triggered this way, the specified role overrides the
@@ -127,11 +164,45 @@ that opened the PR) and the **reviewer agent(s)** iterate until resolution or es
 APPROVE verdict and all review threads are resolved. The author must verify both
 conditions before merging.
 
-**Merge gate:** The author agent must not merge until ALL of:
-1. All requested reviewers have posted APPROVE (or the COMMENT equivalent — see below)
-2. All review threads are marked resolved
-3. The `human-needed` label is absent
-4. A human reviewer (the repo owner) has had time to review (safeguard)
+### Merge tiers
+
+The merge tier is determined at PR creation and controls what happens after the review
+loop completes. The system errs on the side of caution — if in doubt, bump up a tier.
+
+**Tier 1 — `merge/auto`: Agent can merge autonomously**
+
+All of these must be true:
+- Only Documentation Specialist or Lead Technical Writer as reviewer (docs/ai-ops)
+- `size/small` (< 50 lines)
+- No round limits hit
+- All reviewers returned APPROVE
+- No `human-needed` label was ever applied
+
+After merge, post a comment: "Auto-merged by agent. [1-line summary of what changed]."
+
+**Tier 2 — `merge/ack`: Agent can merge after human acknowledgement**
+
+Any of these trigger tier 2:
+- Chief Engineer or Lead Systems Designer as reviewer
+- `size/medium` (50–200 lines)
+- 2+ reviewer roles assigned
+
+When the review loop completes, the agent posts a "Ready for merge" comment
+@-mentioning the repo owner. The agent does NOT merge until the human says "merge"
+or clicks the merge button.
+
+**Tier 3 — `merge/manual`: Agent must not merge**
+
+Any of these trigger tier 3:
+- `size/large` (200+ lines)
+- Any round limit was hit during review
+- `human-needed` was applied at any point
+- 3+ reviewer roles (cross-cutting)
+- Touches CI, build scripts, or architectural decisions
+- `domain/design` + `domain/code` in the same PR
+
+The human must review and merge manually. The agent posts a "Manual merge required"
+comment with a summary of what needs human attention.
 
 ### Self-approval workaround
 
