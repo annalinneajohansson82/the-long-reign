@@ -3,8 +3,8 @@ title: "Villagers"
 id: 03-simulation/villagers
 version: 0.1.0
 status: Draft
-author:
-last_updated: 2026-07-05
+author: Lead Technical Writer
+last_updated: 2026-07-06
 depends_on:
   - "docs/00-foundation/Glossary.md"
 used_by:

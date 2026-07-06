@@ -3,8 +3,8 @@ title: "Settlement Growth"
 id: 03-simulation/settlement-growth
 version: 0.1.0
 status: Draft
-author:
-last_updated: 2026-07-05
+author: Lead Technical Writer
+last_updated: 2026-07-06
 depends_on:
   - "Villagers.md"
   - "Families.md"
@@ -129,6 +129,8 @@ Poor management has consequences that emerge naturally rather than through arbit
 | Fires | Disasters that damage or destroy buildings. |
 | Decline | General settlement deterioration from neglect. |
 
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation. These specific failure states are not named in `00-foundation/` or `01-vision/`. Note that `01-vision/Respect the Player's Time.md` explicitly prohibits "decay, atrophy, or degradation of the kingdom while the player is away" — any implementation of Abandonment or Decline must be confined to consequences of active in-game management and must not trigger from the passage of real-world time while the game is closed.
+
 ---
 
 # Integration Points
@@ -153,7 +155,7 @@ Poor management has consequences that emerge naturally rather than through arbit
 - [ ] What is the grid-based construction system? (Tile size? Free placement? Snap-to-grid?)
 - [ ] How do decorations quantitatively affect happiness, prestige, and settlement quality?
 - [ ] What triggers fires, revolts, abandonment, and decline?
-- [ ] Are there settlement-level milestones (e.g., "village" → "town" → "city")?
+- [x] Are there settlement-level milestones (e.g., "village" → "town" → "city")? — **Partially resolved:** Per `00-foundation/Glossary.md` (Capital entry), the capital "grows from a camp into a thriving kingdom over the course of the game," confirming that growth stages exist conceptually. Specific milestone names/tiers between "camp" and "thriving kingdom" are not specified.
 - [ ] How does research visually change architecture?
 
 ---

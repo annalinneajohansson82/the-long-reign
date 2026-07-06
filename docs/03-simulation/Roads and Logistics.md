@@ -3,8 +3,8 @@ title: "Roads and Logistics"
 id: 03-simulation/roads-and-logistics
 version: 0.1.0
 status: Draft
-author:
-last_updated: 2026-07-05
+author: Lead Technical Writer
+last_updated: 2026-07-06
 depends_on:
   - "Settlement Growth.md"
 used_by:
@@ -154,7 +154,7 @@ Roads between settlements enable trade. Improved roads improve trade efficiency.
 - [ ] What happens to a road if traffic patterns change and the route is no longer used?
 - [ ] Are there different road types (trade roads, residential paths, industrial routes)?
 - [ ] Can roads be upgraded after paving?
-- [ ] Do roads decay over time without maintenance?
+- [x] Do roads decay over time without maintenance? — **Partially resolved:** Per `01-vision/Respect the Player's Time.md`, roads (and the kingdom generally) must not decay, atrophy, or degrade while the player is away — a returning player's kingdom must be "exactly as they left it." Whether roads can degrade from a lack of active in-game maintenance during play (as distinct from time-based decay while the game is closed) remains open.
 
 ---
 
