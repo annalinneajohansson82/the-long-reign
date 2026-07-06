@@ -3,7 +3,7 @@ title: Exploration
 id: 02-gameplay/exploration
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 last_updated: 2026-07-05
 depends_on: []
 used_by:
@@ -114,6 +114,7 @@ Seasons affect exploration. The source material lists "exploration opportunities
 2. How are regions unlocked — resource expenditure, hero actions, story progression, or exploration milestones?
 3. What are the expedition mechanics (party size, duration, return conditions)?
 4. How do islands work — are they regions, separate maps, or something else?
+   **Answer (per `01-vision/Core Gameplay Loop.md`):** Islands are part of the world map's unlockable regions ("The world map includes unlockable regions (including islands)") — islands are a category of region, not separate maps or systems. The specific mechanic by which an island is unlocked/reached is still open — see the "The World Map" section TODO above.
 5. How many regions are planned?
 6. Are there fog-of-war or line-of-sight mechanics?
 7. Is exploration time-gated (in-game time passes during expeditions)?

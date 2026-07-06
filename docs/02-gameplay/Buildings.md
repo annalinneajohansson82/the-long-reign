@@ -3,7 +3,7 @@ title: Buildings
 id: 02-gameplay/buildings
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 last_updated: 2026-07-05
 depends_on: []
 used_by:
