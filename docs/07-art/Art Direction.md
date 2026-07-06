@@ -6,7 +6,7 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - 00-foundation/why
@@ -37,9 +37,13 @@ Define the overall visual philosophy and artistic direction for The Long Reign. 
 
 The Long Reign is a cozy fantasy kingdom-building simulation rendered in pixel art. The visual direction draws inspiration from the atmosphere of Heroes of Might and Magic II–IV — a warm, inviting fantasy aesthetic — while remaining an original visual identity, not a clone of any existing game.
 
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
+
 The player begins with a handful of settlers on an untouched frontier. The art must make the player feel they are building something that progressively becomes beautiful, lived-in, and uniquely theirs. Every visual element should support the project's North Star: **make the kingdom feel more alive**.
 
 The rendering target is the browser, using PixiJS as the rendering engine.
+
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 
 ---
 
@@ -91,7 +95,11 @@ Every art decision must serve at least one design pillar. The following mapping 
 
 # Seasonal Visuals
 
-The game includes seasons that affect gameplay (harvests, winter hardships, exploration opportunities). The art direction must therefore support:
+The game includes seasons that affect gameplay (harvests, winter hardships, exploration opportunities).
+
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
+
+The art direction must therefore support:
 
 - Seasonal palette shifts (greens of spring/summer → oranges of autumn → whites/blues of winter)
 - Seasonal terrain changes (snow cover, autumn foliage, spring bloom)

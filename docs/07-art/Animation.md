@@ -6,7 +6,7 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - 07-art/art-direction
@@ -35,7 +35,11 @@ Define the animation direction for The Long Reign — what animates, the style o
 
 Animation in The Long Reign serves the North Star: **make the kingdom feel more alive**. Animation is not decorative — it communicates game state, reinforces the living simulation, and rewards player attention.
 
-All animation is pixel art animation. The source material provides no technical animation parameters (frame rates, frame counts, tools). This document derives animation requirements from the design philosophy and marks gaps as open questions.
+All animation is pixel art animation.
+
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
+
+The source material provides no technical animation parameters (frame rates, frame counts, tools). This document derives animation requirements from the design philosophy and marks gaps as open questions.
 
 ---
 

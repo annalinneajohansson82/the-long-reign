@@ -6,7 +6,7 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - 07-art/art-direction
@@ -41,6 +41,8 @@ Audio in The Long Reign should feel like the sound of a world worth returning to
 # Design Goals
 
 - **Cozy Fantasy Atmosphere.** Audio should feel warm, acoustic, and organic. The sound of a fireplace, the rustle of leaves, the distant hammer of a blacksmith. Not epic orchestral bombast. Not dark ambient dread.
+
+  > **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 - **Living Simulation.** The kingdom should *sound* alive. Ambient audio should reflect villager activity, industry, nature, and seasons. Silence should feel like absence, not a neutral state.
 - **Meaningful Growth.** As the kingdom grows, the soundscape should densify — more activity sounds, more complex layers. An early-game camp sounds different from a late-game city.
 - **Player Feedback.** Audio should provide clear, satisfying feedback for player actions: placing buildings, paving roads, upgrading, discovering, recording Chronicle entries.
