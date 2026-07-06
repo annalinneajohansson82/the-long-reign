@@ -31,7 +31,7 @@ Pick the role  →  Pick the model  →  Load the session  →  Work  →  Hand 
 2. **Pick the model** currently assigned to that role in `model-role-calibration.md`.
 3. **Load the session** following `context-loading-strategy.md` (system prompt, calibration, role context package, task).
 4. **Work**, keeping the session within its role (see below).
-5. **Hand off** using `handoff-template.md` so the next session can resume — especially important since models change as subscriptions lapse.
+5. **Hand off** — copy `handoff-template.md` to `.ai/handoffs/YYYY-MM-DD.md`, fill it in, and commit. The next session reads it to resume.
 
 ---
 
@@ -40,7 +40,7 @@ Pick the role  →  Pick the model  →  Load the session  →  Work  →  Hand 
 The human triggers session start by saying `start session` (or a recognized equivalent like `load context`, `begin`, `resume`).
 
 1. Read `.ai/session-re-entry.md` for the current focus and open questions from the previous session.
-2. If no handoff exists since the last commit on `main`, run `git log --since=<last-handoff-date or last-session-date>` to reconstruct what changed.
+2. Check `.ai/handoffs/` for the most recent handoff document. If one exists, read it. If no handoff exists since the last commit on `main`, run `git log --since=<last-handoff-date or last-session-date>` to reconstruct what changed.
 3. Review the gathered context with the human — session-re-entry.md is a rough jot, not authoritative. Discuss and update it together.
 4. Identify the task type and look up its owner in the Routing Table (`AI Routing Policy.md`).
 5. Look up the current model for that role in `model-role-calibration.md`. Check the *Deadlines & Replacements* table — if a deadline has passed, use the fallback and update the calibration file.
@@ -79,7 +79,6 @@ The human triggers session end by saying `end session` (or a recognized equivale
 
 # Open Questions
 
-- TODO: Where handoff documents are stored (in-repo directory, Obsidian vault, or session-only)
 - TODO: Whether session starts are logged anywhere (a session journal) for traceability
 
 ---
