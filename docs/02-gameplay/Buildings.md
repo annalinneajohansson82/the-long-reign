@@ -10,9 +10,9 @@ depends_on:
   - 00-foundation/principles
 used_by:
   - 02-gameplay/mvp
-  - 02-gameplay/Resources.md
-  - 02-gameplay/Production Chains.md
-  - 03-simulation/Settlement Growth.md
+  - 02-gameplay/resources
+  - 02-gameplay/production-chains
+  - 03-simulation/settlement-growth
 tags:
   - gameplay
   - buildings
