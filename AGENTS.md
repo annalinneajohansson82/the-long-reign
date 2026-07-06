@@ -19,6 +19,14 @@ Anna's manual `git commit` uses her global config and is unaffected.
 
 ## PR safeguards
 
+**Always assign the PR creator as the assignee.** This is a hygiene rule — the PR
+should be assigned to whoever created it so the owner can see at a glance who is
+responsible for driving it.
+
+```bash
+gh pr edit <number> --add-assignee "$(gh api user --jq '.login')"
+```
+
 **Always add the repo owner as a requested reviewer on every PR.** This is a hard rule
 until the automated workflow has proven itself. The owner reviews alongside the agent
 reviewers and can catch misclassifications, bad escalations, or review errors.
