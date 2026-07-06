@@ -25,7 +25,10 @@ Quick-reorientation document for the human, used as a rough notebook jot at sess
 
 Machine user identity system for automated git/GitHub operations on The Long Reign is **fully built, tested, documented, and merged**.
 
-All workflow documentation lives in `AGENTS.md` in the project root. The handoff at `.ai/handoffs/2026-07-06.md` has the full session summary.
+PR #7 merged: AGENTS.md no longer hardcodes repo owner username.
+PR #8 merged: AGENTS.md and .env.example fully project-agnostic — all project-specific values moved to .env.
+
+All workflow documentation lives in `AGENTS.md` in the project root.
 
 ---
 
