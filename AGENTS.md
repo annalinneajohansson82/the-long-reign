@@ -17,6 +17,11 @@ source .env && \
 These env vars override git global config only for the current shell process.
 Anna's manual `git commit` uses her global config and is unaffected.
 
+**Never push directly to `main`.** Every change — docs, config, code, typo fixes,
+everything — goes through a branch and a pull request. This is enforced by repository
+rules, but the agent must never attempt a direct push even if the token has permission.
+Branch → commit → push → PR → labels → assignee → reviewers → review loop → merge.
+
 ## PR safeguards
 
 **Always assign the PR creator as the assignee.** This is a hygiene rule — the PR
