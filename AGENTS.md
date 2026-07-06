@@ -123,6 +123,33 @@ classification table.
 Once reviews are posted, the PR enters the review loop. The **author agent** (the agent
 that opened the PR) and the **reviewer agent(s)** iterate until resolution or escalation.
 
+**Loop termination:** The review loop ends when all reviewers have returned a clear
+APPROVE verdict and all review threads are resolved. The author must verify both
+conditions before merging.
+
+**Merge gate:** The author agent must not merge until ALL of:
+1. All requested reviewers have posted APPROVE (or the COMMENT equivalent — see below)
+2. All review threads are marked resolved
+3. The `human-needed` label is absent
+4. A human reviewer (the repo owner) has had time to review (safeguard)
+
+### Self-approval workaround
+
+Because all agent actions use the same machine user token, GitHub blocks the formal
+`gh pr review --approve` when the reviewer is also the PR author. Use `--comment`
+instead and put the verdict as the first line of the body:
+
+```
+APPROVE — all bugs verified fixed, no remaining issues.
+
+### Re-review by Documentation Specialist (DeepSeek V4 Pro)
+
+...
+```
+
+A COMMENT review that starts with `APPROVE` counts as approval for loop termination.
+Same for `REQUEST_CHANGES` in a COMMENT body — it triggers another round.
+
 ### Author agent responsibilities
 
 When responding to a review:
@@ -130,11 +157,13 @@ When responding to a review:
 1. **Bugs and errors must be fixed.** No discussion. Fix, push, reply to the thread with
    "Fixed in `<sha>`" and mark the thread resolved. Then **re-request review** from the
    reviewer who flagged the issue — spawn a new subagent with the same role, same PR
-   number, and the thread context so it can verify the fix.
+   number, and the thread context so it can verify the fix. A fix is not resolved until
+   the reviewer's re-review confirms it.
 
 2. **Suggestions backed by documented standards** (doc standards, design pillars, architecture
    rules) may be accepted or contested. To contest: reply with a specific reference to the
    contradicting document, and the reasoning. Do not contest without a doc reference.
+   If accepted, fix and re-request review as with bugs.
 
 3. **Suggestions without documented support** (taste, style, approach preferences) may be
    accepted or contested with reasoning. If the reviewer disagrees with the reasoning, the
