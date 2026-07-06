@@ -37,16 +37,20 @@ Pick the role  →  Pick the model  →  Load the session  →  Work  →  Hand 
 
 # Starting a Session
 
-The human triggers session start by saying `start session` (or a recognized equivalent like `load context`, `begin`, `resume`).
+The human triggers session start by saying `start session` (or a recognized equivalent
+like `load context`, `begin`, `resume`). When the Hermes agent loads the project
+workspace, it performs these checks proactively without waiting for a trigger:
 
 1. Read `.ai/session-re-entry.md` for the current focus and open questions from the previous session.
-2. Check `.ai/handoffs/` for the most recent handoff document. If one exists, read it. If no handoff exists since the last commit on `main`, run `git log --since=<YYYY-MM-DD>` (ISO 8601 date of last handoff or last session) to reconstruct what changed.
-3. Review the gathered context with the human — session-re-entry.md is a rough jot, not authoritative. Discuss and update it together.
-4. Identify the task type and look up its owner in the Routing Table (`AI Routing Policy.md`).
-5. Look up the current model for that role in `model-role-calibration.md`. Check the *Deadlines & Replacements* table — if a deadline has passed, use the fallback and update the calibration file.
-6. Load the role's system prompt from `system-prompts/<role>-system-prompt.md`.
-7. Assemble the context package for the role per `docs/08-technical/Context Packaging Strategy.md` and load it in the order given by `context-loading-strategy.md`.
-8. State the task using the Context Packaging Format: task description, required documents, optional documents, constraints, acceptance criteria.
+2. Run `git log --oneline -5` and `git status --short` to reconstruct recent activity.
+3. Source `.env` and run `gh api notifications --jq '.[] | "\(.subject.title) — \(.repository.full_name) — \(.reason)"'` to check for new GitHub notifications for the machine user. Report any unread notifications.
+4. Check `.ai/handoffs/` for the most recent handoff document. If one exists, read it. If no handoff exists since the last commit on `main`, run `git log --since=<YYYY-MM-DD>` (ISO 8601 date of last handoff or last session) to reconstruct what changed.
+5. Review the gathered context with the human — session-re-entry.md is a rough jot, not authoritative. Discuss and update it together.
+6. Identify the task type and look up its owner in the Routing Table (`AI Routing Policy.md`).
+7. Look up the current model for that role in `model-role-calibration.md`. Check the *Deadlines & Replacements* table — if a deadline has passed, use the fallback and update the calibration file.
+8. Load the role's system prompt from `system-prompts/<role>-system-prompt.md`.
+9. Assemble the context package for the role per `docs/08-technical/Context Packaging Strategy.md` and load it in the order given by `context-loading-strategy.md`.
+10. State the task using the Context Packaging Format: task description, required documents, optional documents, constraints, acceptance criteria.
 
 ---
 
