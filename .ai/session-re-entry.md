@@ -23,17 +23,15 @@ Quick-reorientation document for the human, used as a rough notebook jot at sess
 
 # Current Focus
 
-Machine user identity system for automated git/GitHub operations on The Long Reign is **fully built, tested, documented, and merged**.
+MVP implementation (M1–M10) is **complete, reviewed, and merged** as PR #9. The game is functionally playable: 30×20 grid, click-to-gather wood, 4 building types (town hall, house, stockpile, forester's hut), toolbar, upgrade prompts, A* pathfinding, dirty-flag rendering, auto-save.
 
-PR #7 merged: AGENTS.md no longer hardcodes repo owner username.
-PR #8 merged: AGENTS.md and .env.example fully project-agnostic — all project-specific values moved to .env.
-
-All workflow documentation lives in `AGENTS.md` in the project root.
+Project is now in the **post-MVP design phase**: decide which post-MVP system to tackle next, or polish the MVP with visual variants (M11) and game feel.
 
 ---
 
 # Open Questions
 
-- Machine user new-account restriction: when does it lift? Test `gh pr edit --add-reviewer annalinnejohansson82` periodically.
-- First real tier 1 auto-merge PR: when to run it?
-- Should the labeling + merge workflow be extracted into a skill?
+- What's the next post-MVP system to design/build? Exploration? Heroes? Multiple resources?
+- When to tackle M11 (Polish — visual variants, build preview, stockpile fill)?
+- Should the Claude Code dispatch skill be exercised on a real post-MVP task?
+- Machine user new-account restriction still active — Anna adds herself as reviewer manually.

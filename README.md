@@ -8,11 +8,32 @@ The settlement is the protagonist. The kingdom waits patiently. The stories emer
 
 ---
 
-## ⚠️ Status: Heavy Work-In-Progress
+## Status: MVP Playable
 
-This is a single nerd's side-quest. Nothing is playable yet. Everything is documentation and ideas. You're looking at the blueprint phase of a project that may or may not become a game.
+The MVP is implemented and playable. You can place a town hall, click trees to gather wood, build houses and a stockpile and a forester's hut, upgrade buildings through multiple tiers, and watch your settlement grow. It's a sandbox — no endpoint, no win condition, just the loop.
 
-**What exists:** ~80+ design documents, a spec-first methodology, and a folder full of hopes and dreams. **What doesn't:** code, art, audio, or anything you can click on.
+**Tech stack:** TypeScript 5 + Vite 6 + PixiJS 8 + React 19
+
+**What exists:**
+- 30×20 grid with ~25 trees and 10 villagers
+- Click-to-gather: click a tree, nearest villager walks to it, wood is added to stockpile
+- 4 building types: town hall (6 upgrade tiers), house (2 tiers, visual variants), stockpile (50 wood cap), forester's hut (auto-plants trees)
+- Toolbar with affordability/unlock/cap checks, contextual upgrade prompts
+- A* pathfinding, dirty-flag rendering, auto-save, beforeunload save
+- Full spec: ~80+ documentation files, ADR log, glossary, 6 design pillars
+
+**What doesn't yet exist:** Exploration, heroes, multiple resources, production chains, colonies, combat, seasons, world generation, audio, pixel art.
+
+---
+
+## Quick Start
+
+```bash
+npm install
+npm run dev      # dev server on localhost:5173
+npm test         # 7 tests
+npm run build    # production build
+```
 
 ---
 
@@ -32,8 +53,10 @@ Everything lives in [`docs/`](docs/). Start here:
 
 - [`00-foundation/`](docs/00-foundation/) — why this project exists, design pillars, and how decisions are made
 - [`01-vision/`](docs/01-vision/) — the vision, core gameplay loop, and design philosophy
+- [`02-gameplay/MVP.md`](docs/02-gameplay/MVP.md) — MVP scope boundary and accepted decisions
+- [`08-technical/MVP-Technical-Specification.md`](docs/08-technical/MVP-Technical-Specification.md) — data structures, render architecture, build order
 
-All other documentation descends from the foundation. Read in numbered order.
+All documentation descends from the foundation. Read in numbered order.
 
 ---
 
