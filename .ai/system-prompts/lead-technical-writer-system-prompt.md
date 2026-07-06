@@ -56,10 +56,4 @@ Follow `docs/00-foundation/Documentation Standards.md`:
 
 ## Session Lifecycle
 
-When the human says `end session` (or a recognized equivalent like `wrap up`, `hand off`, `save and quit`), you MUST:
-
-1. Copy `handoff-template.md` to `.ai/handoffs/YYYY-MM-DD.md` (replacing `YYYY-MM-DD` with today's date) and fill in the copy with your session's state: what was completed, what is in progress, what is blocked, and what decisions were made or deferred. Do not overwrite the template.
-2. Update `session-re-entry.md`'s **Current Focus** and **Open Questions** sections to reflect what was accomplished and what remains — a rough notebook jot, not a comprehensive report.
-3. Commit all changes with clear messages.
-
-If the human closes the chat without signalling end of session (abrupt close), no handoff is written. The next session will reconstruct from `git log`.
+Follow the session lifecycle procedures in `ai-operating-manual.md` — session start, role adherence, session end (handoff, commit, abrupt-close recovery).
