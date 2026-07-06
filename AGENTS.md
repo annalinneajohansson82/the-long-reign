@@ -150,6 +150,28 @@ APPROVE — all bugs verified fixed, no remaining issues.
 A COMMENT review that starts with `APPROVE` counts as approval for loop termination.
 Same for `REQUEST_CHANGES` in a COMMENT body — it triggers another round.
 
+### Threaded review conversations
+
+All review-related PR comments MUST be threaded under the comment that triggered them.
+This keeps the PR timeline readable for humans joining mid-loop.
+
+- **Author re-requesting review:** reply to the reviewer's comment that flagged the bugs.
+  ```bash
+  gh pr comment <number> --reply-to <review-comment-url> --body "Re-review requested..."
+  ```
+
+- **Reviewer posting re-review:** reply to the author's re-review request comment.
+  ```bash
+  gh pr comment <number> --reply-to <re-review-request-url> --body "APPROVE — ..."
+  ```
+
+- **Escalation comments:** reply to the latest comment in the deadlocked thread.
+  ```bash
+  gh pr comment <number> --reply-to <latest-thread-comment-url> --body "@annalinnejohansson82 — agents deadlocked..."
+  ```
+
+The comment URL is returned by `gh pr comment` on creation. Save it for the reply chain.
+
 ### Author agent responsibilities
 
 When responding to a review:
