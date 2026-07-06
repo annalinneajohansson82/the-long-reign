@@ -10,10 +10,10 @@ depends_on:
   - 00-foundation/principles
 used_by:
   - 02-gameplay/mvp
-  - 02-gameplay/Production Chains.md
-  - 02-gameplay/Buildings.md
-  - 04-economy/Resource Flow.md
-  - 04-economy/Economy Overview.md
+  - 02-gameplay/production-chains
+  - 02-gameplay/buildings
+  - 04-economy/resource-flow
+  - 04-economy/economy-overview
 tags:
   - gameplay
   - resources
@@ -99,7 +99,7 @@ Resources intended for exchange between settlements. (Post-MVP.)
 
 # Resource Flow
 
-See `04-economy/Resource Flow.md` for the full specification.
+See `04-economy/resource-flow` for the full specification.
 
 Key principles:
 - Resources physically move from source to destination.
@@ -176,8 +176,8 @@ Resources are gathered through a single mechanic in the MVP:
 
 # Related Documents
 
-- `02-gameplay/Production Chains.md` — How resources transform
-- `02-gameplay/Exploration.md` — Exploration gathering
-- `04-economy/Resource Flow.md` — Resource movement mechanics
-- `04-economy/Economy Overview.md` — Economy system overview
-- `03-simulation/Roads and Logistics.md` — How infrastructure affects resource flow
+- `02-gameplay/production-chains` — How resources transform
+- `02-gameplay/exploration` — Exploration gathering
+- `04-economy/resource-flow` — Resource movement mechanics
+- `04-economy/economy-overview` — Economy system overview
+- `03-simulation/roads-and-logistics` — How infrastructure affects resource flow

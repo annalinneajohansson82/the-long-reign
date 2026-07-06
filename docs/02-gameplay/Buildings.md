@@ -187,9 +187,9 @@ These remain open for future scope expansion:
 
 # Related Documents
 
-- `03-simulation/Roads and Logistics.md` — Road mechanics and logistics
-- `03-simulation/Settlement Growth.md` — Settlement evolution
-- `03-simulation/Villagers.md` — Villager lifecycle
-- `05-world/Capital.md` — Capital-specific rules
-- `05-world/Colonies.md` — Colony-specific rules
+- `03-simulation/roads-and-logistics` — Road mechanics and logistics
+- `03-simulation/settlement-growth` — Settlement evolution
+- `03-simulation/villagers` — Villager lifecycle
+- `05-world/capital` — Capital-specific rules
+- `05-world/colonies` — Colony-specific rules
 - `04-economy/` — Economy documents defining resource interactions with buildings
