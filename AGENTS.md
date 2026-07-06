@@ -37,6 +37,38 @@ gh pr edit <number> --add-reviewer "$HERMES_REPO_OWNER"
 
 Run this immediately after `gh pr create`. Do not skip it.
 
+## PR owner reply polling
+
+**When a PR is open and the author agent is waiting for the repo owner to reply**
+(after escalation, merge-ack, or any situation where the agent is blocked on
+`$HERMES_REPO_OWNER`), the agent MUST spawn a session-scoped background poller.
+
+The poller checks the PR for new comments from the repo owner every 60 seconds.
+When one is detected, the agent gets notified via `watch_patterns`.
+
+```bash
+terminal(background=true, watch_patterns=["OWNER_REPLIED"], command=
+  'source .env && export GH_TOKEN="$HERMES_GITHUB_TOKEN" && \
+   last_seen="" && \
+   while true; do \
+     sleep 60 && \
+     count=$(gh api "repos/annalinneajohansson82/the-long-reign/issues/<PR_NUMBER>/comments" --jq "length" 2>/dev/null) && \
+     latest=$(gh api "repos/annalinneajohansson82/the-long-reign/issues/<PR_NUMBER>/comments" --jq ".[-1].user.login" 2>/dev/null) && \
+     if [ "$count" != "$last_seen" ] && [ "$latest" = "$HERMES_REPO_OWNER" ]; then \
+       echo "OWNER_REPLIED count=$count user=$latest"; \
+     fi && \
+     last_seen="$count"; \
+   done'
+)
+```
+
+**Cleanup:** When the PR is merged or closed, the agent MUST kill the poller via
+`process(action='kill', session_id='<id>')`. Pollers are session-scoped — if the
+session ends, they die automatically. No orphan risk.
+
+**Do NOT use cron jobs for PR polling.** Cron jobs persist across sessions and can
+accumulate. Use background terminal processes with `watch_patterns` instead.
+
 ## Subagent PR review signatures
 
 All PR reviews come from the same machine user account. To differentiate subagents
