@@ -6,11 +6,10 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - 06-ui/ux-principles
-  - 08-technical/architecture
 
 used_by:
   - Accessibility Agent
