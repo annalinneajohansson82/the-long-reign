@@ -3,7 +3,7 @@ title: Progression
 id: 02-gameplay/progression
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 last_updated: 2026-07-05
 depends_on:
   - 02-gameplay/Buildings.md

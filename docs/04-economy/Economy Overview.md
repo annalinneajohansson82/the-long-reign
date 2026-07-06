@@ -4,9 +4,9 @@ id: 04-economy/economy-overview
 
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - docs/01-vision/Design Pillars.md
@@ -112,6 +112,8 @@ There is no explicit specialization menu. Identity emerges from simulation.
 # Seasons
 
 Seasons affect the economy. Harvest yields vary by season. Winter imposes hardships that the player can prepare for through infrastructure and stockpiling. Exploration opportunities shift with the seasons.
+
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 
 TODO: Specific seasonal modifiers (yield multipliers, consumption rates, travel penalties) are not yet defined in the source material.
 

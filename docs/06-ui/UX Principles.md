@@ -6,7 +6,7 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - 00-foundation/principles
@@ -68,7 +68,7 @@ The UI must never create a sense of urgency, missed opportunity, or obligation. 
 - There is no "daily" anything in the UI — no daily quests, no daily reward popups, no streak trackers.
 - Return after six months should present no UI pressure cues.
 
-> **Open Question:** Is a purely informational "here's what your kingdom has been up to" summary on return acceptable, or does it violate the spirit of no-pressure return? (See `01-vision/Respect the Player's Time.md`, Open Questions.)
+> **Resolved:** Yes — a purely informational "here's what your kingdom has been up to" summary on return is acceptable and does not violate the spirit of no-pressure return, provided it is opt-out via settings and carries no rewards. Per `01-vision/Respect the Player's Time.md`, Resolved Questions Q1.
 
 ---
 

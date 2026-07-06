@@ -3,8 +3,8 @@ title: "Seasons"
 id: 03-simulation/seasons
 version: 0.1.0
 status: Draft
-author:
-last_updated: 2026-07-05
+author: Lead Technical Writer
+last_updated: 2026-07-06
 depends_on:
   - "Settlement Growth.md"
 used_by:
@@ -25,6 +25,8 @@ Defines the seasonal cycle and its gameplay effects. Seasons are a simulation la
 # Overview
 
 Seasons affect gameplay, with both positive and negative effects. The source material provides three examples of seasonal effects: harvests (positive), winter hardships (negative), and exploration opportunities (contextual).
+
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation. Neither the existence of a seasons system nor these specific effects are described in `00-foundation/` or `01-vision/`.
 
 Seasons contribute to the feeling of a living world that changes over time, supporting the game's simulation-first philosophy.
 
@@ -101,7 +103,7 @@ The source material does not specify visual targets for seasons. The game's art 
 - [ ] Are there seasonal visual changes (snow, autumn leaves, blooming)?
 - [ ] Do different regions or colonies experience different seasons?
 - [ ] Are there seasonal events or festivals?
-- [ ] How do seasons interact with the "time stops when closed" save model?
+- [x] How do seasons interact with the "time stops when closed" save model? — **Resolved:** Per `01-vision/Respect the Player's Time.md`, "time stops while the game is closed" and offline progress is intentionally not simulated. The seasonal cycle therefore does not advance while the game is closed; it resumes exactly where it left off when the player returns.
 - [ ] Does game speed affect seasonal duration?
 
 ---

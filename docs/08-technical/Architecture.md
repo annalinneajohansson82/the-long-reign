@@ -125,7 +125,7 @@ The documentation domain is the project's source of truth. It is not software �
 The following constraints are binding on all implementation. They are derived from approved design decisions and ADRs.
 
 1. **Single-player only**. There is no server, no multiplayer, and no network synchronization.
-2. **Browser-only**. The game runs in a web browser. No native build is required (though an Electron wrapper is not ruled out; see Open Questions).
+2. **Browser-only**. The game runs in a web browser as a pure web application, for now. No native build or Electron wrapper is currently planned (see `00-foundation/Why.md`, Open Questions).
 3. **No offline progress**. The simulation clock stops when the game is closed. Time does not advance in the background.
 4. **No monetization**. The game contains no premium currency, battle passes, energy systems, daily rewards, or FOMO mechanics.
 5. **LocalStorage persistence**. All save data is stored locally in the browser. No server-side storage.
@@ -173,6 +173,7 @@ Simulation (owns state)
 # Open Questions
 
 - TODO: Whether Electron or similar wrapper is desired for a desktop-like experience
+  **Resolved**: Pure web for now — no Electron wrapper is currently planned (`00-foundation/Why.md`, Open Questions: "Target platform specifics beyond 'browser-based'... Answer: pure web for now"). May be revisited in the future.
 - TODO: Specific module bundler, build tool, and dev server choices (Vite, Webpack, etc.)
 - TODO: Entity-Component-System (ECS) architecture vs. object-oriented simulation — source material does not specify
 - TODO: Whether the simulation tick rate is fixed, variable, or configurable

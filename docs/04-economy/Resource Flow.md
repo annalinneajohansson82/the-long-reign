@@ -4,9 +4,9 @@ id: 04-economy/resource-flow
 
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - docs/04-economy/Economy Overview.md

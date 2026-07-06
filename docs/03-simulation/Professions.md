@@ -3,8 +3,8 @@ title: "Professions"
 id: 03-simulation/professions
 version: 0.1.0
 status: Draft
-author:
-last_updated: 2026-07-05
+author: Lead Technical Writer
+last_updated: 2026-07-06
 depends_on:
   - "Villagers.md"
 used_by:
@@ -41,6 +41,8 @@ The source material describes the following economic activities, which imply cor
 - Weapon research
 
 The technology tree includes branches for agriculture, trade, industry, and religion — each of which implies profession specializations.
+
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation. This list of economic activities and technology-tree branches does not appear in `00-foundation/` or `01-vision/`.
 
 ---
 

@@ -6,7 +6,7 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - 07-art/art-direction
@@ -34,6 +34,8 @@ Define the pixel art technical approach for The Long Reign — resolution, tile 
 # Overview
 
 The Long Reign uses pixel art as its visual medium. This choice aligns with the cozy fantasy atmosphere, the grid-based construction system, and the browser-based rendering target (PixiJS). Pixel art provides a warm, nostalgic aesthetic that supports the long-term attachment goal — a kingdom that looks handcrafted, not procedurally generic.
+
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 
 The source material does not specify technical pixel art parameters (tile size, resolution, color depth). This document derives what it can from the design philosophy and marks the rest as open questions requiring formal decisions.
 

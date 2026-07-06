@@ -3,7 +3,7 @@ title: "World Overview"
 id: 05-world/world-overview
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 last_updated: 2026-07-05
 depends_on:
   - docs/01-vision/Vision Statement.md
@@ -52,6 +52,7 @@ The world exists to serve the settlement. Exploration is not an independent game
 - The world is not procedurally generated. (See `World Generation.md` for the handcrafted world authoring approach.)
 - The world is not a combat-focused sandbox. Combat exists to support settlement progression, not as the primary world interaction.
 - The world does not scale to the player's level. Content is placed intentionally — the player grows into it.
+  > **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 - This document does not define specific region layouts, resource placements, or encounter tables.
 
 ---

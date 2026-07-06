@@ -3,8 +3,8 @@ title: "Weather"
 id: 03-simulation/weather
 version: 0.1.0
 status: Draft
-author:
-last_updated: 2026-07-05
+author: Lead Technical Writer
+last_updated: 2026-07-06
 depends_on:
   - "Seasons.md"
 used_by: []
@@ -93,7 +93,7 @@ Not yet specified. Candidates for future design consideration:
 - [ ] How is weather visually represented? (Particles? Screen effects? Lighting changes?)
 - [ ] Does weather vary by region or biome?
 - [ ] Is there a weather forecast or prediction system?
-- [ ] How does weather interact with the "time stops when closed" save model?
+- [x] How does weather interact with the "time stops when closed" save model? — **Resolved:** Per `01-vision/Respect the Player's Time.md`, "time stops while the game is closed" and offline progress is intentionally not simulated. Weather therefore does not advance while the game is closed.
 - [ ] Are there extreme weather events (storms, blizzards) that trigger Chronicle entries?
 - [ ] Does weather affect hero expeditions?
 

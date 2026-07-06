@@ -6,7 +6,7 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - 09-roadmap/mvp
@@ -118,7 +118,7 @@ All documentation must be finalized and release-ready:
 
 - Release does not add new features or content beyond Beta
 - Release does not include post-launch live service features
-- Release does not establish a monetization model (that decision is independent of the release milestone per source material)
+- Release does not need to establish a monetization model — `00-foundation/Why.md` (Open Questions) already resolves this: the game is 100% free and open source, with no monetization beyond a possible, entirely optional GitHub Sponsors or Ko-fi link
 
 ---
 
@@ -148,7 +148,7 @@ All documentation must be finalized and release-ready:
 
 - TODO: Release date (target)
 - TODO: Distribution platform (self-hosted web, itch.io, Steam browser wrapper, other)
-- TODO: Monetization model (free, paid, donation-based — source material is silent on this)
+- **Resolved:** Monetization model. `00-foundation/Why.md` (Open Questions) confirms the game is 100% free and open source, with no monetization beyond a possible, entirely optional GitHub Sponsors or Ko-fi link.
 - TODO: Domain name
 - TODO: Hosting provider and deployment architecture
 - TODO: Analytics approach (none, privacy-respecting, standard — must align with Respect the Player's Time)

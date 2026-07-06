@@ -6,7 +6,7 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - 06-ui/ux-principles
@@ -123,7 +123,7 @@ Notifies the player when resource thresholds are reached (first coal mine, 1000 
 **Derived from:** Heroes (Handoff — hero mortality, injury system), Combat (`02-gameplay/Combat.md`)
 
 Notifies the player of hero state changes:
-- Hero injured (Medium/Hard difficulty) — returns to capital
+- Hero injured (Medium difficulty) — returns to capital
 - Hero death (Hard difficulty)
 - Hero level up
 - Hero recruitment
@@ -186,13 +186,13 @@ Low-priority system messages: autosave confirmation, import/export status, setti
 
 ## No-Absence Policy
 
-When a player returns after an absence (hours, days, or six months), the notification area must be empty. No "while you were away" summary. No backlog of missed notifications. No "you missed X events."
+When a player returns after an absence (hours, days, or six months), the notification area must be empty of unread backlog. No backlog of missed notifications. No "you missed X events."
 
-The player can open the Chronicle to see what happened. The notification system does not surface absence-related information.
+The player can open the Chronicle to see what happened. The notification system does not surface absence-related pressure cues.
 
 This is a hard requirement derived from Respect the Player's Time.
 
-> **Open Question:** Is a single, unobtrusive "Your kingdom has been quiet. Open the Chronicle to catch up." message acceptable on return, or does any return message violate the spirit? See `01-vision/Respect the Player's Time.md`, Open Questions.
+> **Resolved:** A single, unobtrusive "here's what happened" / "your kingdom has been quiet" return summary is acceptable — it does not violate the spirit of no-pressure return. It must be opt-out via settings and must carry no rewards. Per `01-vision/Respect the Player's Time.md`, Resolved Questions Q1.
 
 ---
 

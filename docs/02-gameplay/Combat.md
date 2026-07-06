@@ -3,7 +3,7 @@ title: Combat
 id: 02-gameplay/combat
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 last_updated: 2026-07-05
 depends_on: []
 used_by:

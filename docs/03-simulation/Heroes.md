@@ -3,8 +3,8 @@ title: "Heroes"
 id: 03-simulation/heroes
 version: 0.1.0
 status: Draft
-author:
-last_updated: 2026-07-05
+author: Lead Technical Writer
+last_updated: 2026-07-06
 depends_on:
   - "Villagers.md"
   - "Professions.md"
@@ -118,7 +118,7 @@ See `Living Memories.md` for full specification.
 - [ ] What is the complete cast of heroes? (Names, personalities, backstories)
 - [ ] What are the unique abilities for each hero?
 - [ ] How do heroes level up? (Experience from combat? From kingdom milestones?)
-- [ ] How does hero recruitment work? (Story-driven? Discovery-based?)
+- [x] How does hero recruitment work? (Story-driven? Discovery-based?) — **Resolved:** Discovery-based. Per `01-vision/Core Gameplay Loop.md` (Stage 1: Explore), unlockable regions each contain "recruitable heroes" found through exploration. The exact recruitment interaction (automatic vs. player-triggered) is not further specified.
 - [ ] Can heroes form families with villagers or other heroes?
 - [ ] What happens to a hero's unique abilities and equipment on death (Hard difficulty)?
 - [ ] Do heroes age? What is their lifespan relative to villagers?

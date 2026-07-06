@@ -6,7 +6,7 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - 06-ui/ux-principles
@@ -41,6 +41,7 @@ The HUD state must be fully persisted across save/load sessions — see `UX Prin
 # Design Goals
 
 - **Minimal footprint.** The HUD should occupy as little screen space as possible. Target: no more than 10–15% of the viewport.
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 - **Contextual.** Show information relevant to what the player is looking at or interacting with.
 - **Non-intrusive.** HUD elements should never distract from the kingdom. Animations should be gentle.
 - **Persistent.** HUD visibility preferences and layout state must survive save/load.
@@ -178,6 +179,7 @@ Per the Handoff's Full Session Persistence section, the following HUD state must
 # Acceptance Criteria
 
 - [ ] HUD elements do not obscure more than 15% of the viewport.
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 - [ ] All HUD elements are keyboard-navigable.
 - [ ] HUD state is fully persisted across save/load.
 - [ ] No HUD element introduces FOMO, urgency, or pressure.

@@ -6,7 +6,7 @@ version: 0.1.0
 status: Draft
 author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - 07-art/art-direction
@@ -45,6 +45,8 @@ The source material provides no direct UI or branding specification. The followi
 
 - **Kingdom-First Design.** The game world is the primary visual element. UI elements should be as minimal and unobtrusive as possible while remaining functional.
 - **Cozy Fantasy Identity.** Colors should be warm. Typography should feel handcrafted but readable. The visual identity should say "come in and stay a while" — not "hurry up and play."
+
+  > **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 - **Meaningful Growth Reflection.** The UI should reflect kingdom progression. A late-game HUD might show more information (more resources, more colonies, more heroes) than an early-game HUD, but should scale gracefully.
 - **Respect the Player's Time.** The UI must never display: countdown timers, daily reward claim buttons, login streak trackers, energy bars, premium currency indicators, battle pass progress, FOMO banners, or "you've been gone" guilt messages.
 - **The Six-Month Return Test.** A returning player should feel welcomed, not overwhelmed. The UI should help them re-orient without drowning them in "what you missed" notifications.
@@ -195,7 +197,7 @@ The game's title should communicate the core themes: time, permanence, growth, a
 - Battle pass progress
 - "Limited time!" banners
 - Red notification badges demanding attention
-- "Welcome back! Here's what you missed!" guilt summaries
+- "Welcome back! Here's what you missed!" guilt summaries *(Note: per `Respect the Player's Time.md` Resolved Questions, neutral "here's what happened" welcome-back summaries are permitted if opt-out via settings and no rewards are attached — only guilt/FOMO-framed versions are prohibited.)*
 
 ---
 
