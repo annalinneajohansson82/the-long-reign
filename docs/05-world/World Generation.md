@@ -3,7 +3,7 @@ title: "World Generation"
 id: 05-world/world-generation
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 last_updated: 2026-07-05
 depends_on:
   - docs/05-world/World Overview.md
@@ -50,6 +50,7 @@ This means every region, point of interest, resource node, and encounter is inte
 
 - The world is not procedurally generated at runtime. Save files do not generate new regions.
 - The world is not randomized per playthrough. Every player experiences the same handcrafted world.
+  > **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 - This document does not define the specific authoring tool (Tiled, custom editor, in-game editor). That is a technical decision for `docs/08-technical/`.
 - This document does not define the specific data format for world files.
 

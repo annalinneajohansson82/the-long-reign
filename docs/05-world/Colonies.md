@@ -3,7 +3,7 @@ title: "Colonies"
 id: 05-world/colonies
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 last_updated: 2026-07-05
 depends_on:
   - docs/05-world/World Overview.md

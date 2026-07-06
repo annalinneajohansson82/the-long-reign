@@ -120,6 +120,8 @@ A simulated individual. Villagers are procedurally generated and numerous.
 - Villagers move into the kingdom, form households, marry, have children, age, attend school, learn professions, work, retire, and die.
 - Schools impact the `education` attribute. Education gates access to certain professions.
 - Death does not necessarily remove a villager from the data model — deceased villagers may be retained for the Chronicle and Living Memories (see Open Questions).
+- The `gender` attribute (Male / Female) is a data-modeling assumption, not a specified gameplay rule.
+  > **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 
 ---
 

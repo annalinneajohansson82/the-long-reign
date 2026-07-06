@@ -3,7 +3,7 @@ title: "Points of Interest"
 id: 05-world/points-of-interest
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 last_updated: 2026-07-05
 depends_on:
   - docs/05-world/World Overview.md
@@ -50,6 +50,7 @@ The source material does not use the term "Points of Interest" explicitly but de
 - POIs are not procedurally generated. They are handcrafted.
 - POIs are not purely cosmetic — they must provide gameplay value.
 - POIs are not infinitely repeatable — most POI content is finite (a resource node depletes, a hero is recruited once).
+  > **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation. (Note: this also pre-empts the "POI Persistence" section below, which correctly leaves resource-node depletion as an open question.)
 - This document does not define specific POI locations, names, or content.
 
 ---
