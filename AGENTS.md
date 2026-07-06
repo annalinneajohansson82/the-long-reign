@@ -51,19 +51,21 @@ Run this immediately after `gh pr create`. Do not skip it.
 The poller checks the PR for new comments from the repo owner every 60 seconds.
 When one is detected, the agent gets notified via `watch_patterns`.
 
-```bash
+```
 terminal(background=true, watch_patterns=["OWNER_REPLIED"], command=
-  'source .env && export GH_TOKEN="$HERMES_GITHUB_TOKEN" && \
-   last_seen="" && \
-   while true; do \
-     sleep 60 && \
-     count=$(gh api "repos/annalinneajohansson82/the-long-reign/issues/<PR_NUMBER>/comments" --jq "length" 2>/dev/null) && \
-     latest=$(gh api "repos/annalinneajohansson82/the-long-reign/issues/<PR_NUMBER>/comments" --jq ".[-1].user.login" 2>/dev/null) && \
-     if [ "$count" != "$last_seen" ] && [ "$latest" = "$HERMES_REPO_OWNER" ]; then \
-       echo "OWNER_REPLIED count=$count user=$latest"; \
-     fi && \
-     last_seen="$count"; \
-   done'
+  "source .env && \\
+   export GH_TOKEN=\"$HERMES_GITHUB_TOKEN\" && \\
+   REPO=$(gh repo view --json nameWithOwner --jq .nameWithOwner) && \\
+   last_seen=\"\" && \\
+   while true; do \\
+     sleep 60 && \\
+     count=$(gh api \"repos/$REPO/issues/<PR_NUMBER>/comments\" --jq \"length\" 2>/dev/null) && \\
+     latest=$(gh api \"repos/$REPO/issues/<PR_NUMBER>/comments\" --jq \".[-1].user.login\" 2>/dev/null) && \\
+     if [ \"$count\" != \"$last_seen\" ] && [ \"$latest\" = \"$HERMES_REPO_OWNER\" ]; then \\
+       echo \"OWNER_REPLIED count=$count user=$latest\"; \\
+     fi && \\
+     last_seen=\"$count\"; \\
+   done"
 )
 ```
 
