@@ -3,7 +3,7 @@ title: Model → Role Calibration
 version: 0.1.0
 status: Active
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 tags:
   - ops

@@ -3,7 +3,7 @@ title: AI Operating Manual
 version: 0.1.0
 status: Draft
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 tags:
   - ops
@@ -31,17 +31,22 @@ Pick the role  →  Pick the model  →  Load the session  →  Work  →  Hand 
 2. **Pick the model** currently assigned to that role in `model-role-calibration.md`.
 3. **Load the session** following `context-loading-strategy.md` (system prompt, calibration, role context package, task).
 4. **Work**, keeping the session within its role (see below).
-5. **Hand off** using `handoff-template.md` so the next session can resume — especially important since models change as subscriptions lapse.
+5. **Hand off** — copy `handoff-template.md` to `.ai/handoffs/YYYY-MM-DD.md`, fill it in, and commit. The next session reads it to resume.
 
 ---
 
 # Starting a Session
 
-1. Identify the task type and look up its owner in the Routing Table (`AI Routing Policy.md`).
-2. Look up the current model for that role in `model-role-calibration.md`. Check the *Deadlines & Replacements* table — if a deadline has passed, use the fallback and update the calibration file.
-3. Load the role's system prompt from `system-prompts/<role>-system-prompt.md`.
-4. Assemble the context package for the role per `docs/08-technical/Context Packaging Strategy.md` and load it in the order given by `context-loading-strategy.md`.
-5. State the task using the Context Packaging Format: task description, required documents, optional documents, constraints, acceptance criteria.
+The human triggers session start by saying `start session` (or a recognized equivalent like `load context`, `begin`, `resume`).
+
+1. Read `.ai/session-re-entry.md` for the current focus and open questions from the previous session.
+2. Check `.ai/handoffs/` for the most recent handoff document. If one exists, read it. If no handoff exists since the last commit on `main`, run `git log --since=<YYYY-MM-DD>` (ISO 8601 date of last handoff or last session) to reconstruct what changed.
+3. Review the gathered context with the human — session-re-entry.md is a rough jot, not authoritative. Discuss and update it together.
+4. Identify the task type and look up its owner in the Routing Table (`AI Routing Policy.md`).
+5. Look up the current model for that role in `model-role-calibration.md`. Check the *Deadlines & Replacements* table — if a deadline has passed, use the fallback and update the calibration file.
+6. Load the role's system prompt from `system-prompts/<role>-system-prompt.md`.
+7. Assemble the context package for the role per `docs/08-technical/Context Packaging Strategy.md` and load it in the order given by `context-loading-strategy.md`.
+8. State the task using the Context Packaging Format: task description, required documents, optional documents, constraints, acceptance criteria.
 
 ---
 
@@ -56,9 +61,12 @@ Pick the role  →  Pick the model  →  Load the session  →  Work  →  Hand 
 
 # Ending a Session
 
-1. Fill in `handoff-template.md` with the session's state: what was completed, what is in progress, what is blocked, and what decisions were made or deferred.
-2. Commit any repository changes with clear messages.
+The human triggers session end by saying `end session` (or a recognized equivalent like `wrap up`, `hand off`, `save and quit`). If the chat is closed without a signal (abrupt close), no handoff is written — the next session will reconstruct from `git log`.
+
+1. Copy `handoff-template.md` to `.ai/handoffs/YYYY-MM-DD.md` (using today's date), fill in the copy, and commit. Do not overwrite the template.
+2. Update `session-re-entry.md`'s **Current Focus** and **Open Questions** sections to reflect what was accomplished and what remains. This is a rough notebook jot, not a comprehensive report — enough to jog the human's memory next session.
 3. Record open questions in the relevant document's *Open Questions* section (or the parking lot), not only in the handoff.
+4. Commit any repository changes with clear messages.
 
 ---
 
@@ -71,7 +79,6 @@ Pick the role  →  Pick the model  →  Load the session  →  Work  →  Hand 
 
 # Open Questions
 
-- TODO: Where handoff documents are stored (in-repo directory, Obsidian vault, or session-only)
 - TODO: Whether session starts are logged anywhere (a session journal) for traceability
 
 ---
@@ -80,7 +87,9 @@ Pick the role  →  Pick the model  →  Load the session  →  Work  →  Hand 
 
 - `model-role-calibration.md` — who is currently behind each role
 - `context-loading-strategy.md` — what to load, in what order
-- `handoff-template.md` — how to end a session
+- `handoff-template.md` — how to end a session (template in `.ai/`)
+- `session-re-entry.md` — quick-reorientation for the human
+- `handoffs/` — completed handoff documents by date
 - `docs/08-technical/AI Development Workflow.md` — roles and responsibilities
 - `docs/08-technical/AI Routing Policy.md` — task routing
 - `docs/08-technical/Context Packaging Strategy.md` — context packages by role

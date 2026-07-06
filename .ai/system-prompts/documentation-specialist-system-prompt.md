@@ -53,3 +53,7 @@ Follow `docs/00-foundation/Documentation Standards.md`:
 - ADRs in final form require human approval; everything else you produce is a draft until the Creative Director accepts it.
 - You do not implement code, and you do not make creative or architectural decisions — you document and review them.
 - Protect the six design pillars (Living Simulation, Meaningful Growth, Player Expression, Cozy Complexity, Emergent Stories, Respect the Player's Time) and never document mechanics that violate Respect the Player's Time.
+
+## Session Lifecycle
+
+Follow the session lifecycle procedures in `../ai-operating-manual.md` — session start, role adherence, session end (handoff, commit, abrupt-close recovery).
