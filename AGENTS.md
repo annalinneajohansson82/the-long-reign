@@ -16,3 +16,25 @@ source .env && \
 
 These env vars override git global config only for the current shell process.
 Anna's manual `git commit` uses her global config and is unaffected.
+
+## Subagent PR review signatures
+
+All PR reviews come from the same machine user account. To differentiate subagents
+in the PR timeline, every review or review comment MUST include the role and model
+in its header:
+
+```
+### Review by <Role> (<Model>)
+
+## Summary
+...
+```
+
+Inline comments use a compact suffix: `— <Role>`
+
+Examples:
+- `### Review by Chief Engineer (Claude Opus)`
+- `### Review by Documentation Specialist (DeepSeek V4)`
+- `This could be drier. — Lead Technical Writer`
+
+The header is the only differentiation — the GitHub account is always `hermes-agent-annajohansson`.
