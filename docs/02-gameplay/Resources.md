@@ -50,9 +50,19 @@ The resource system supports long-term progression without stressful optimizatio
 
 # Resource Types
 
-The source material provides examples of resource categories. The complete taxonomy is not yet specified.
+## MVP Scope
 
-## Raw Resources
+The MVP uses a single resource: **wood**. All other resource categories (raw, processed, luxury, crafting, trade) are scoped for post-MVP.
+
+- **Wood** is gathered from trees on the grid. Each tree yields 3 wood.
+- Wood is the only currency for building construction and upgrades.
+- Wood is stored in a stockpile (capacity: 50). Excess wood beyond capacity is lost.
+
+## Post-MVP Resource Taxonomy (Conceptual)
+
+The source material identifies the following resource categories for future expansion:
+
+### Raw Resources
 
 Materials gathered directly from the environment through exploration or extraction buildings.
 
@@ -60,9 +70,7 @@ Examples from source material:
 - **Agriculture.** Crops and foodstuffs.
 - **Coal.** Mined fuel resource.
 
-> **TODO:** Define the complete set of raw resources. Each needs: source (mine, farm, gather), storage building, and transport method.
-
-## Processed Resources
+### Processed Resources
 
 Materials created by transforming raw resources through production chains.
 
@@ -72,31 +80,17 @@ Examples from source material:
 - **Leather.**
 - **Cloth.**
 
-> **TODO:** Define the complete set of processed resources. Each needs: raw inputs, required building, production time, and outputs.
+### Luxury Goods
 
-## Luxury Goods
+High-tier processed items with special functions. (Post-MVP.)
 
-High-tier processed items with special functions.
+### Crafting Ingredients
 
-Examples from source material: luxury goods (no specific examples listed).
+Items used in specific crafting recipes. (Post-MVP.)
 
-> **TODO:** Define luxury goods — what they are, how they differ from regular processed resources, and their gameplay role.
+### Trade Goods
 
-## Crafting Ingredients
-
-Items used in specific crafting recipes.
-
-Mentioned in source material; no examples listed.
-
-> **TODO:** Define crafting ingredients and their relationship to the production chain system.
-
-## Trade Goods
-
-Resources intended for exchange between settlements or with external trade partners.
-
-Mentioned in source material as part of trade networks and trade routes.
-
-> **TODO:** Define trade goods and how they differ from internally-consumed resources.
+Resources intended for exchange between settlements. (Post-MVP.)
 
 ---
 
@@ -114,39 +108,66 @@ Key principles:
 
 # Gathering
 
-Resources are gathered through two primary methods:
+Resources are gathered through a single mechanic in the MVP:
 
-1. **Exploration.** The player ventures into the world, discovers resource nodes, and returns with gathered materials. This is part of the core gameplay loop: Explore → Gather Resources → Return Home.
-2. **Settlement Production.** Buildings within the settlement automatically produce resources based on assigned villagers, available inputs, and building upgrades.
+**Click-to-harvest from grid nodes.**
 
-> **TODO:** Define exploration gathering mechanics — is it automatic on discovery, manual player action, hero-led, or something else?
+- The grid starts with ~25 trees scattered across it.
+- The player clicks a tree to initiate gathering.
+- The nearest idle villager walks to the tree, plays a gathering animation, and 3 wood is added to the stockpile.
+- The tree disappears from that tile, freeing it for construction.
+- The villager idles at the node's location rather than walking back.
+- Wood collection is immediate upon the animation completing — no per-unit travel time.
+
+**Forester's Hut (renewable source):**
+- Once built, the forester's hut periodically spawns a sapling on a random empty tile within a radius.
+- After a ~30-second growth timer, the sapling becomes a mature, harvestable tree.
+- Trees spawned by the forester's hut are visually distinct (younger appearance) but mechanically identical to starting trees.
+- The forester works automatically — no villager assignment is needed in the MVP.
+
+**Post-MVP:** Exploration gathering (hero-led expeditions) and settlement production (automated resource buildings).
 
 ---
 
 # Storage
 
-The source material mentions **warehouses** as part of the logistics chain.
-
-> **TODO:** Define storage mechanics — capacity, per-settlement vs. global, overflow behavior, and whether storage buildings have upgrade tiers.
-
----
-
-# Acceptance Criteria
-
-- [ ] Resources can be gathered through exploration and settlement production.
-- [ ] Resources physically move between buildings — no teleportation.
-- [ ] Different resource types (raw, processed, luxury, crafting, trade) are distinguishable in the UI and game systems.
-- [ ] Resource flow is visually observable.
+- The **stockpile** is the only storage structure in the MVP.
+- **Capacity:** 50 wood.
+- Wood collected beyond the stockpile's capacity is **lost** — there is no overflow.
+- Only one stockpile may exist in the MVP. (Post-MVP: multiple storage buildings, upgradeable capacity.)
+- The stockpile visually shows its fill level (empty → partially filled → full) to give the player immediate feedback.
+- Wood is consumed directly from the stockpile when the player places a building or initiates an upgrade. No transfer mechanics exist in the MVP.
 
 ---
 
-# Open Questions
+# Acceptance Criteria (MVP)
 
-1. What is the complete taxonomy of resources?
+- [ ] Player can click a tree to initiate gathering. The nearest idle villager walks to it.
+- [ ] Villager plays a gathering animation at the tree node.
+- [ ] Wood (3 per tree) is added to the stockpile on gathering completion.
+- [ ] The tree disappears, freeing the tile for construction.
+- [ ] Gathering into a full stockpile (50 wood) silently discards excess wood.
+- [ ] Forester's hut spawns new trees on empty tiles nearby on a timer (~30 seconds).
+- [ ] Trees work identically whether placed by the initial seed or by the forester's hut.
+
+# Open Questions (MVP-Resolved)
+
+| # | Question | MVP Answer |
+|---|----------|------------|
+| 1 | Complete taxonomy of resources? | Single resource (wood) in MVP. Full taxonomy deferred to post-MVP. |
+| 2 | How does exploration gathering work mechanically? | Deferred. MVP uses click-to-harvest from grid nodes only. |
+| 3 | What are the storage rules (capacity, overflow, per-settlement vs. shared)? | Single stockpile, 50 wood capacity. Overflow is lost. One global stockpile per settlement. |
+| 4 | How do resources transfer between capital and colonies? | Colonies are post-MVP. |
+| 5 | Are resources needed for building construction, villager consumption, or both? | MVP: wood for building/upgrade costs only. Villager consumption deferred. |
+
+# Open Questions (Post-MVP — Carried Forward)
+
+1. Complete taxonomy of resources — what raw, processed, luxury, crafting, and trade goods exist?
 2. How does exploration gathering work mechanically (automatic, manual, hero-led)?
-3. What are the storage rules (capacity, overflow, per-settlement vs. shared)?
-4. How do resources transfer between the capital and colonies?
-5. Are resources needed for building construction, villager consumption, or both?
+3. What are the storage rules at scale — multiple stockpiles, capacity upgrades, per-settlement budgets?
+4. How do resources transfer between settlements?
+5. Are resources consumed by villagers (food) or only used for construction and production?
+6. Resource flow mechanics (carts, roads, visible logistics) — how does physical movement work?
 
 ---
 
