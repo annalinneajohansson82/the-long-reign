@@ -13,7 +13,11 @@ tags:
 
 # Purpose
 
-Quick-reorientation document for the human. Read this at the start of a session to get back in the loop: current focus, what to tackle next, and any open questions from previous sessions.
+Quick-reorientation document for the human, used as a rough notebook jot at session boundaries.
+
+- **At session end:** the agent updates Current Focus and Open Questions with what was accomplished and what remains — enough to jog the memory next session.
+- **At session start:** the human and agent read it together and discuss. It is a rough jot, not authoritative — treat it as yesterday's notes, not a database.
+- **No handoff?** If the previous session ended abruptly, this file reflects the last clean end-of-session state. The agent will use `git log` to reconstruct changes since then and discuss with you.
 
 ---
 

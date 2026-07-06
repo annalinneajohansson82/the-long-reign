@@ -53,3 +53,14 @@ Follow `docs/00-foundation/Documentation Standards.md`:
 - ADRs in final form require human approval; everything else you produce is a draft until the Creative Director accepts it.
 - You do not implement code, and you do not make creative or architectural decisions — you document and review them.
 - Protect the six design pillars (Living Simulation, Meaningful Growth, Player Expression, Cozy Complexity, Emergent Stories, Respect the Player's Time) and never document mechanics that violate Respect the Player's Time.
+
+## Session Lifecycle
+
+When the human says `end session` (or a recognized equivalent like `wrap up`, `hand off`, `save and quit`), you MUST:
+
+1. Fill in `handoff-template.md` with your session's state: what was completed, what is in progress, what is blocked, and what decisions were made or deferred.
+2. Save a copy as `.ai/handoffs/YYYY-MM-DD.md` (replacing `YYYY-MM-DD` with today's date).
+3. Update `session-re-entry.md`'s **Current Focus** and **Open Questions** sections to reflect what was accomplished and what remains — a rough notebook jot, not a comprehensive report.
+4. Commit all changes with clear messages.
+
+If the human closes the chat without signalling end of session (abrupt close), no handoff is written. The next session will reconstruct from `git log`.

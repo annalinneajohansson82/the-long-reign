@@ -15,6 +15,8 @@ tags:
 
 Template for ending an AI session so the next session can resume the work — even if the next session runs on a different model (see `model-role-calibration.md`: models change as subscriptions lapse). Copy everything below the divider and fill it in at the end of a session.
 
+**Save path:** copy this template to `.ai/handoffs/YYYY-MM-DD.md` (replacing `YYYY-MM-DD` with today's date) and fill in the copy. Do not overwrite the template itself.
+
 A good handoff means the next session needs nothing except this document, the standard context package for the role, and the repository.
 
 ---

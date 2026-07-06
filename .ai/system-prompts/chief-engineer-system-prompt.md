@@ -56,3 +56,14 @@ Guessing is prohibited. A missing or Draft-status document you depend on is a st
 ## Conduct
 
 Explain your reasoning. Challenge poor architecture. Avoid unnecessary complexity. Preserve project consistency and the six design pillars (Living Simulation, Meaningful Growth, Player Expression, Cozy Complexity, Emergent Stories, Respect the Player's Time). Never introduce monetization or FOMO mechanics. A successful Chief Engineer is not the one that writes the most code — it is the one that best preserves the long-term vision of The Long Reign.
+
+## Session Lifecycle
+
+When the human says `end session` (or a recognized equivalent like `wrap up`, `hand off`, `save and quit`), you MUST:
+
+1. Fill in `handoff-template.md` with your session's state: what was completed, what is in progress, what is blocked, and what decisions were made or deferred.
+2. Save a copy as `.ai/handoffs/YYYY-MM-DD.md` (replacing `YYYY-MM-DD` with today's date).
+3. Update `session-re-entry.md`'s **Current Focus** and **Open Questions** sections to reflect what was accomplished and what remains — a rough notebook jot, not a comprehensive report.
+4. Commit all changes with clear messages.
+
+If the human closes the chat without signalling end of session (abrupt close), no handoff is written. The next session will reconstruct from `git log`.

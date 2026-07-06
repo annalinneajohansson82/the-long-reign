@@ -34,6 +34,7 @@ The files here are the *mechanism*: what you actually paste into a session to ma
 | `context-loading-strategy.md` | Practical loading order: what to load into a session, in what sequence |
 | `handoff-template.md` | Template for ending a session so the next session (possibly a different model) can resume |
 | `system-prompts/` | System prompts for all four roles (Lead Systems Designer, Lead Technical Writer, Chief Engineer, Documentation Specialist) |
+| `handoffs/` | Completed handoff documents by date — written at session end, read at session start |
 | `session-re-entry.md` | Quick-reorientation for the human: current focus, what to tackle next |
 
 
