@@ -4,9 +4,9 @@ id: 04-economy/agriculture
 
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - docs/04-economy/Economy Overview.md
@@ -34,6 +34,8 @@ This document defines the agriculture system — food production, farming, lives
 Agriculture is the foundation of the kingdom's survival. A kingdom without food cannot grow. Agriculture feeds villagers, supports population growth, and produces raw materials (textiles, animal products) that feed into other production chains.
 
 Seasons directly affect agriculture. Harvests yield bountifully in favorable seasons and barely sustain during winter hardships. The player builds infrastructure — farms, granaries, mills — to smooth seasonal variability and ensure the kingdom never starves.
+
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 
 The source material lists "agriculture" as both an economic category and a research specialization path. A colony with fertile land, farms, and mills naturally becomes an agricultural center.
 

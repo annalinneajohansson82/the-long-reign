@@ -4,9 +4,9 @@ id: 04-economy/industries
 
 version: 0.1.0
 status: Draft
-author:
+author: Lead Technical Writer
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 depends_on:
   - docs/04-economy/Economy Overview.md
@@ -35,6 +35,8 @@ This document defines the industrial production layer — the extraction and pro
 Industry covers the resource extraction and primary processing backbone of the economy. Mines yield ore and coal. Smelters convert ore into metals. Forests provide timber. Quarries produce stone. Tanners convert hides into leather. These industries transform the natural environment into civilization's building blocks.
 
 "Industries" is listed as one of the things the player builds over time in the project vision: "roads, industries, trade networks, communities, history." Industry is also a research specialization path alongside agriculture, trade, and religion.
+
+> **TODO:** Not confirmed by 00-foundation/01-vision — requires Creative Director confirmation.
 
 The source material lists these industrial resource categories: coal, steel, glass, leather, cloth.
 
