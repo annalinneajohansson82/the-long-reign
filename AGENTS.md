@@ -32,7 +32,7 @@ until the automated workflow has proven itself. The owner reviews alongside the 
 reviewers and can catch misclassifications, bad escalations, or review errors.
 
 ```bash
-gh pr edit <number> --add-reviewer annalinnejohansson82
+gh pr edit <number> --add-reviewer "$HERMES_REPO_OWNER"
 ```
 
 Run this immediately after `gh pr create`. Do not skip it.
@@ -238,7 +238,7 @@ This keeps the PR timeline readable for humans joining mid-loop.
 
 - **Escalation comments:** reply to the latest comment in the deadlocked thread.
   ```bash
-  gh pr comment <number> --reply-to <latest-thread-comment-url> --body "@annalinnejohansson82 — agents deadlocked..."
+  gh pr comment <number> --reply-to <latest-thread-comment-url> --body "@${HERMES_REPO_OWNER} — agents deadlocked..."
   ```
 
 The comment URL is returned by `gh pr comment` on creation. Save it for the reply chain.
@@ -305,7 +305,7 @@ When agents cannot resolve a thread:
    ```
 2. Post a summary comment @-mentioning the repo owner:
    ```
-   @annalinnejohansson82 — agents deadlocked on `<path>:<line>`.
+   @${HERMES_REPO_OWNER} — agents deadlocked on `<path>:<line>`.
    Reviewer says: ... Author says: ... No documented answer found.
    ```
 3. The owner is already a requested reviewer (from PR safeguards), so no need to re-add.
