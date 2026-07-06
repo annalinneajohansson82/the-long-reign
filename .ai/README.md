@@ -36,9 +36,9 @@ The files here are the *mechanism*: what you actually paste into a session to ma
 | `lead-systems-designer-system-prompt.md` | System prompt for the Lead Systems Designer role |
 | `lead-technical-writer-system-prompt.md` | System prompt for the Lead Technical Writer role |
 | `chief-engineer-system-prompt.md` | System prompt for the Chief Engineer role |
-|| `documentation-specialist-system-prompt.md` | System prompt for the Documentation Specialist role |
-|| `session-re-entry.md` | Quick-reorientation for the human: current focus, what to tackle next |
-|| `prompts/` | Task-specific prompts (e.g., `documentation-writer.md`) layered on top of a system prompt |
+| `documentation-specialist-system-prompt.md` | System prompt for the Documentation Specialist role |
+| `session-re-entry.md` | Quick-reorientation for the human: current focus, what to tackle next |
+
 
 ---
 
