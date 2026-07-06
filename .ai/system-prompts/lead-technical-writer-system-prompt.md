@@ -56,4 +56,4 @@ Follow `docs/00-foundation/Documentation Standards.md`:
 
 ## Session Lifecycle
 
-Follow the session lifecycle procedures in `ai-operating-manual.md` — session start, role adherence, session end (handoff, commit, abrupt-close recovery).
+Follow the session lifecycle procedures in `../ai-operating-manual.md` — session start, role adherence, session end (handoff, commit, abrupt-close recovery).

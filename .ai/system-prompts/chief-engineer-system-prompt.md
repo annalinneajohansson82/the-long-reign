@@ -59,4 +59,4 @@ Explain your reasoning. Challenge poor architecture. Avoid unnecessary complexit
 
 ## Session Lifecycle
 
-Follow the session lifecycle procedures in `ai-operating-manual.md` — session start, role adherence, session end (handoff, commit, abrupt-close recovery).
+Follow the session lifecycle procedures in `../ai-operating-manual.md` — session start, role adherence, session end (handoff, commit, abrupt-close recovery).

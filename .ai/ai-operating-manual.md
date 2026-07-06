@@ -40,7 +40,7 @@ Pick the role  →  Pick the model  →  Load the session  →  Work  →  Hand 
 The human triggers session start by saying `start session` (or a recognized equivalent like `load context`, `begin`, `resume`).
 
 1. Read `.ai/session-re-entry.md` for the current focus and open questions from the previous session.
-2. Check `.ai/handoffs/` for the most recent handoff document. If one exists, read it. If no handoff exists since the last commit on `main`, run `git log --since=<last-handoff-date or last-session-date>` to reconstruct what changed.
+2. Check `.ai/handoffs/` for the most recent handoff document. If one exists, read it. If no handoff exists since the last commit on `main`, run `git log --since=<YYYY-MM-DD>` (ISO 8601 date of last handoff or last session) to reconstruct what changed.
 3. Review the gathered context with the human — session-re-entry.md is a rough jot, not authoritative. Discuss and update it together.
 4. Identify the task type and look up its owner in the Routing Table (`AI Routing Policy.md`).
 5. Look up the current model for that role in `model-role-calibration.md`. Check the *Deadlines & Replacements* table — if a deadline has passed, use the fallback and update the calibration file.
@@ -63,7 +63,7 @@ The human triggers session start by saying `start session` (or a recognized equi
 
 The human triggers session end by saying `end session` (or a recognized equivalent like `wrap up`, `hand off`, `save and quit`). If the chat is closed without a signal (abrupt close), no handoff is written — the next session will reconstruct from `git log`.
 
-1. Fill in `handoff-template.md` with the session's state: what was completed, what is in progress, what is blocked, and what decisions were made or deferred. Do not overwrite the template — instead, copy it to `.ai/handoffs/YYYY-MM-DD.md` (using today's date) and fill in the copy.
+1. Copy `handoff-template.md` to `.ai/handoffs/YYYY-MM-DD.md` (using today's date), fill in the copy, and commit. Do not overwrite the template.
 2. Update `session-re-entry.md`'s **Current Focus** and **Open Questions** sections to reflect what was accomplished and what remains. This is a rough notebook jot, not a comprehensive report — enough to jog the human's memory next session.
 3. Record open questions in the relevant document's *Open Questions* section (or the parking lot), not only in the handoff.
 4. Commit any repository changes with clear messages.
