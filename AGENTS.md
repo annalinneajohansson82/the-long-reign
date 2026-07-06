@@ -128,7 +128,9 @@ that opened the PR) and the **reviewer agent(s)** iterate until resolution or es
 When responding to a review:
 
 1. **Bugs and errors must be fixed.** No discussion. Fix, push, reply to the thread with
-   "Fixed in `<sha>`" and mark the thread resolved.
+   "Fixed in `<sha>`" and mark the thread resolved. Then **re-request review** from the
+   reviewer who flagged the issue — spawn a new subagent with the same role, same PR
+   number, and the thread context so it can verify the fix.
 
 2. **Suggestions backed by documented standards** (doc standards, design pillars, architecture
    rules) may be accepted or contested. To contest: reply with a specific reference to the
