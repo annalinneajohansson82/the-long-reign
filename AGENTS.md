@@ -187,6 +187,21 @@ When re-reviewing after author changes:
   resolution, escalate. This applies even to bug fixes — if the author has tried 3 times
   and the reviewer still says it's wrong, something deeper is wrong.
 
+- **Round tracking.** Every review and re-review MUST include the round number in its
+  header. The author agent counts previous review posts on the same thread before
+  responding. If this is round 3 and the issue remains unresolved, escalate instead
+  of attempting another fix.
+
+  ```
+  ### Review by Chief Engineer (Claude Opus) — Round 1
+  ### Re-review by Chief Engineer (Claude Opus) — Round 2
+  ### Re-review by Chief Engineer (Claude Opus) — Round 3 (final)
+  ```
+
+- **Author enforcement.** Before responding in round 3, the author agent must check:
+  has this exact thread been through two prior review cycles? If yes, escalate. Do not
+  attempt a third fix — flag it as `human-needed` and let the repo owner decide.
+
 ### Escalation
 
 When agents cannot resolve a thread:
