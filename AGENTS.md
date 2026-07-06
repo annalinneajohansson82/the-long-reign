@@ -20,21 +20,29 @@ Anna's manual `git commit` uses her global config and is unaffected.
 ## Subagent PR review signatures
 
 All PR reviews come from the same machine user account. To differentiate subagents
-in the PR timeline, every review or review comment MUST include the role and model
-in its header:
+in the PR timeline, every review or review comment MUST include an identity header.
+
+**Role agents** (Chief Engineer, Lead Technical Writer, Documentation Specialist, Lead Systems Designer):
 
 ```
 ### Review by <Role> (<Model>)
-
-## Summary
-...
 ```
 
-Inline comments use a compact suffix: `— <Role>`
+**Ad-hoc / unnamed subagents** (CI fixers, spot-checkers, one-off delegates):
+
+```
+### Review by <Descriptor> (<Model>)
+```
+
+The descriptor should be a short label describing what the subagent was tasked with
+(e.g. `CI Fix Agent`, `Spot Check`, `Code Review Agent`).
+
+**Inline comments** use a compact suffix in both cases: `— <Role or Descriptor>`
 
 Examples:
 - `### Review by Chief Engineer (Claude Opus)`
-- `### Review by Documentation Specialist (DeepSeek V4)`
+- `### Review by CI Fix Agent (DeepSeek V4)`
 - `This could be drier. — Lead Technical Writer`
+- `Timeout should be configurable. — Spot Check`
 
 The header is the only differentiation — the GitHub account is always `hermes-agent-annajohansson`.
