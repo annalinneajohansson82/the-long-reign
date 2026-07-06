@@ -3,7 +3,7 @@ title: AI Configuration Directory
 version: 0.1.0
 status: Draft
 
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 
 tags:
   - ops
@@ -42,7 +42,6 @@ The files here are the *mechanism*: what you actually paste into a session to ma
 # Conventions
 
 - System prompts are **per role**, because roles are stable while models change as subscriptions lapse. Which model to run a role's prompt on is looked up in `model-role-calibration.md` — that file is the only place model names appear as assignments. Each prompt also tells the model to confirm the assignment against the calibration file at session start.
-- Task prompts in `prompts/` are **per task**, and assume a system prompt has already established the role.
 - Documentation uses role names, not model names (see `docs/00-foundation/Documentation Standards.md`). The same convention applies here: model names appear only in `model-role-calibration.md`, where the mapping is the point.
 
 ---
@@ -50,4 +49,4 @@ The files here are the *mechanism*: what you actually paste into a session to ma
 # Notes
 
 - `model-role-calibration.md` is the most volatile file in the repository — update it whenever providers, subscriptions, or model availability change.
-- The calibration file references a project skill (`project-the-long-reign`) that does not exist yet; see its Open Questions.
+- The calibration file references the `project-the-long-reign` project skill for onboarding context.
